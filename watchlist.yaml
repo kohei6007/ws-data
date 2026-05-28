@@ -1,0 +1,29 @@
+# 監視リスト（このファイルを編集すると次回 GitHub Actions 実行時に反映される）
+# スマホからもGitHub web UIで直接編集できる
+
+tickers:
+  # 日本株（証券コード4桁）
+  - code: "7011"
+    name: "三菱重工業"
+    note: "防衛テーマ"
+
+  - code: "6758"
+    name: "ソニーグループ"
+    note: ""
+
+  - code: "9984"
+    name: "ソフトバンクグループ"
+    note: "AI/半導体テーマ"
+
+  # 例：追加する場合はこの形式で書き足す
+  # - code: "6920"
+  #   name: "レーザーテック"
+  #   note: "半導体製造装置"
+
+# Cron 実行のオン/オフ（オフにするとAPIコール節約）
+enabled: true
+
+# 出力する snapshot.json に含める内容
+options:
+  with_chart: false  # 画像は重いのでデフォルトOFF。必要時 true
+  market_only: false

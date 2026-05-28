@@ -1,0 +1,45 @@
+name: Daily stock snapshot
+
+on:
+  schedule:
+    # JST 15:30（場後）と JST 翌朝 8:30 に実行
+    # cron は UTC なので JST -9h
+    - cron: '30 6 * * 1-5'   # 平日 UTC 06:30 = JST 15:30 場後
+    - cron: '30 23 * * 0-4'  # 日-木 UTC 23:30 = JST 翌 08:30 寄り前
+  workflow_dispatch:  # 手動実行も可能（GitHub UI からボタンで）
+
+permissions:
+  contents: write  # snapshot.json をリポにコミットするため必要
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --quiet yfinance pandas numpy pyyaml matplotlib
+
+      - name: Run snapshot
+        run: python snapshot_runner.py
+
+      - name: Commit snapshot.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add snapshot.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
