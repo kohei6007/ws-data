@@ -163,17 +163,59 @@ def evaluate_buy_sell(daily, weekly, monthly):
     w = add_ma(weekly.copy())
     m = add_ma(monthly.copy())
 
+    # NaN を含むバーを末尾から除外（場中の暫定バー対策）
+    d = d.dropna(subset=["Close", "MA5", "MA10", "MA20"]).copy()
+    if len(d) < 10:
+        return {
+            "trend_period_bars": 0, "buy_score": 0,
+            "buy_score_max_theoretical": 14, "buy_score_min_theoretical": -7,
+            "buy_reasons": [], "penalty_reasons": [],
+            "hard_avoid_flags": ["データ不足"], "soft_warning_flags": [],
+            "avoid_flags": ["データ不足"], "sell_state": "判定不能",
+            "sell_reasons": [], "surge_pct_last5bars": 0,
+            "stop_loss_candidates": {}, "last_close": 0, "diagnostics": {},
+        }
+
     trend_period = count_trend_period(d)
     last = d.iloc[-1]
     prev = d.iloc[-2]
     is_bull_today = last["Close"] > last["Open"]
-    crossed_up_ma5 = prev["Close"] < prev["MA5"] and last["Close"] > last["MA5"] and is_bull_today
-    crossed_down_ma5 = prev["Close"] > prev["MA5"] and last["Close"] < last["MA5"] and not is_bull_today
+    crossed_up_ma5_today = prev["Close"] < prev["MA5"] and last["Close"] > last["MA5"] and is_bull_today
+    crossed_down_ma5_today = prev["Close"] > prev["MA5"] and last["Close"] < last["MA5"] and not is_bull_today
     near_ma5 = abs(last["Close"] - last["MA5"]) / last["Close"] < 0.015
     bear_two_in_row = (
         d.iloc[-1]["Close"] < d.iloc[-1]["Open"]
         and d.iloc[-2]["Close"] < d.iloc[-2]["Open"]
     )
+
+    # ============================================================
+    # 直近5日スコープの状態分析（v2）
+    # ============================================================
+    recent_5 = d.tail(5)
+    days_below_ma5_in_last_5 = int((recent_5["Close"] < recent_5["MA5"]).sum())
+    bears_in_last_5 = int((recent_5["Close"] < recent_5["Open"]).sum())
+    above_ma5_now = bool(last["Close"] > last["MA5"])
+    below_ma5_now = bool(last["Close"] < last["MA5"])
+
+    ma5_bearish_breakdown_recent = False
+    breakdown_days_ago = None
+    n = len(d)
+    lookback = min(5, n - 1)
+    for ago in range(0, lookback):
+        if n - (ago + 2) < 0:
+            break
+        curr_row = d.iloc[-(ago + 1)]
+        prev_row = d.iloc[-(ago + 2)]
+        crossed_down = (
+            prev_row["Close"] > prev_row["MA5"]
+            and curr_row["Close"] < curr_row["MA5"]
+            and curr_row["Close"] < curr_row["Open"]
+        )
+        if crossed_down:
+            ma5_bearish_breakdown_recent = True
+            breakdown_days_ago = ago
+            break
+
     surge_pct = float((d["Close"].iloc[-1] / d["Close"].iloc[-6] - 1) * 100) if len(d) >= 6 else 0
     is_surge = surge_pct >= 10
 
@@ -183,18 +225,19 @@ def evaluate_buy_sell(daily, weekly, monthly):
 
     buy_score = 0
     buy_breakdown = []
-    if crossed_up_ma5 and trend_period <= 8:
+    if crossed_up_ma5_today and trend_period <= 8:
         buy_score += 3
         buy_breakdown.append((3, f"日足5MAを陽線突破 + トレンド周期{trend_period}本（≤8本）"))
-    elif crossed_up_ma5:
+    elif crossed_up_ma5_today:
         buy_score += 1
         buy_breakdown.append((1, f"日足5MA陽線突破（ただしトレンド周期{trend_period}本）"))
-    if near_ma5 and trend_period <= 8 and direction(d_s5) == "up":
+    if near_ma5 and trend_period <= 8 and direction(d_s5) == "up" and above_ma5_now:
         buy_score += 2
-        buy_breakdown.append((2, f"5MAに近接 + トレンド周期{trend_period}本（押し目候補）"))
-    if direction(d_s5) == "up":
+        buy_breakdown.append((2, f"5MAに近接 + トレンド周期{trend_period}本（押し目候補・終値5MA上）"))
+    # 日足5MA右肩上がり：終値が5MA上の場合のみ加点
+    if direction(d_s5) == "up" and above_ma5_now:
         buy_score += 1
-        buy_breakdown.append((1, "日足5MA右肩上がり"))
+        buy_breakdown.append((1, "日足5MA右肩上がり + 終値5MA上"))
     if direction(d_s20) == "up":
         buy_score += 1
         buy_breakdown.append((1, "日足20MA右肩上がり"))
@@ -234,15 +277,42 @@ def evaluate_buy_sell(daily, weekly, monthly):
         hard_avoid_flags.append("週足20MA下向き = 負けパターン3（マニュアル §8）")
     if is_surge and not near_ma5:
         soft_warning_flags.append(f"直近5本で+{surge_pct:.1f}% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）")
+    # v2: 5MA は上向きだが終値が5MA下に滞在中 = 短期トレンド失速
+    if direction(d_s5) == "up" and below_ma5_now and days_below_ma5_in_last_5 >= 2:
+        buy_score -= 2
+        penalty_breakdown.append((-2, f"日足5MA上向きだが終値が5MA下に直近5日中{days_below_ma5_in_last_5}日 = 短期トレンド失速"))
+        hard_avoid_flags.append(f"日足5MAは上向きだが終値が5MA下に滞在（直近5日中{days_below_ma5_in_last_5}日） = 短期トレンド失速・転換中の可能性")
 
+    # 売り判定（マニュアル §9 準拠・v2）
     sell_state = "ホールド"
     sell_reasons = []
-    if crossed_down_ma5 and direction(d_s5) in ("down", "flat"):
+    # v2: 直近5日内に5MA陰線下抜け + 現在も5MA下 → 3次
+    if ma5_bearish_breakdown_recent and below_ma5_now:
         sell_state = "3次：売却シグナル"
-        sell_reasons.append("5MA下落 + 陰線で5MA下抜け")
+        when = "本日" if breakdown_days_ago == 0 else f"{breakdown_days_ago}日前"
+        sell_reasons.append(
+            f"{when}に5MA陰線下抜け、現在も5MA下"
+            f"（直近5日: {days_below_ma5_in_last_5}日5MA下/陰線{bears_in_last_5}本）"
+            f"（マニュアル §9 3次）"
+        )
+    # v2: 価格が5MA下に複数日 + 陰線多 → 3次相当
+    elif below_ma5_now and days_below_ma5_in_last_5 >= 3 and bears_in_last_5 >= 3:
+        sell_state = "3次：売却シグナル"
+        sell_reasons.append(
+            f"終値が5MA下に直近5日中{days_below_ma5_in_last_5}日、陰線{bears_in_last_5}本 = トレンド転換確定"
+        )
+    elif crossed_down_ma5_today and direction(d_s5) in ("down", "flat"):
+        sell_state = "3次：売却シグナル"
+        sell_reasons.append("本日5MA陰線下抜け + 5MA下落/横ばい")
     elif bear_two_in_row and direction(d_s5) == "flat":
         sell_state = "2次：警戒（売却候補）"
         sell_reasons.append("陰線2本連続 + 5MA横ばい")
+    # v2: 価格が5MA下に複数日（陰線本数の条件は緩い）
+    elif below_ma5_now and days_below_ma5_in_last_5 >= 3:
+        sell_state = "2次：警戒（売却候補）"
+        sell_reasons.append(
+            f"終値が5MA下に直近5日中{days_below_ma5_in_last_5}日 = トレンド転換中の可能性"
+        )
     elif trend_period >= 10:
         sell_state = "1次：利確検討"
         sell_reasons.append(f"トレンド周期{trend_period}本（≥10本）")
@@ -277,6 +347,14 @@ def evaluate_buy_sell(daily, weekly, monthly):
             "日足20MA": round(ma20_now, 2) if ma20_now else None,
         },
         "last_close": round(last_close, 2),
+        "diagnostics": {
+            "below_ma5_now": below_ma5_now,
+            "above_ma5_now": above_ma5_now,
+            "days_below_ma5_in_last_5": days_below_ma5_in_last_5,
+            "bears_in_last_5": bears_in_last_5,
+            "ma5_bearish_breakdown_recent": ma5_bearish_breakdown_recent,
+            "breakdown_days_ago": breakdown_days_ago,
+        },
     }
 
 
@@ -285,6 +363,9 @@ def evaluate_buy_sell(daily, weekly, monthly):
 # ============================================================
 
 def summarize_volume_zones(daily: pd.DataFrame, bins: int = 30) -> dict:
+    daily = daily.dropna(subset=["Open", "High", "Low", "Close", "Volume"]).copy()
+    if len(daily) < 5:
+        return {"resistance_zones_above": [], "support_zones_below": [], "interpretation": "データ不足"}
     typical = (daily["High"] + daily["Low"] + daily["Close"]) / 3
     lo, hi = float(daily["Low"].min()), float(daily["High"].max())
     edges = np.linspace(lo, hi, bins + 1)
@@ -320,7 +401,7 @@ def draw_volume_profile(ticker: str, daily: pd.DataFrame, bins: int = 30, out_pa
     plt.rcParams["font.family"] = ["Yu Gothic", "MS Gothic", "Hiragino Sans", "Meiryo", "sans-serif"]
     plt.rcParams["axes.unicode_minus"] = False
 
-    df = daily.tail(60).copy()
+    df = daily.dropna(subset=["Open", "High", "Low", "Close", "Volume"]).tail(60).copy()
     for p in (5, 10, 20, 50):
         df[f"MA{p}"] = df["Close"].rolling(p).mean()
 
