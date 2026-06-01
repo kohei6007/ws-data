@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-06-02T01:17:03",
+  "analyzed_at": "2026-06-01T16:20:38",
   "market": {
     "nikkei225": {
       "label": "イージー（勝率高）",
@@ -24,10 +24,10 @@
     {
       "ticker": "8035",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:04",
+        "fetched_at": "2026-06-01T16:20:39",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -162,9 +162,9 @@
       },
       "earnings": {
         "next_earnings_date": "2026-07-30",
-        "days_until": 58,
+        "days_until": 59,
         "source": "calendar",
-        "advice": "あと58日。通常運用可"
+        "advice": "あと59日。通常運用可"
       },
       "verdict": "🟢 買いサイン強い",
       "name": "東京エレクトロン",
@@ -173,10 +173,10 @@
     {
       "ticker": "6920",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:05",
+        "fetched_at": "2026-06-01T16:20:40",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -318,10 +318,9 @@
         "interpretation": "上下ともゾーンあり → レンジ展開想定"
       },
       "earnings": {
-        "next_earnings_date": "2026-08-06",
-        "days_until": 65,
-        "source": "earnings_dates",
-        "advice": "あと65日。通常運用可"
+        "next_earnings_date": null,
+        "days_until": null,
+        "advice": "決算日不明（手動確認推奨）"
       },
       "verdict": "🚨 売却シグナル（保有中なら売却検討）",
       "name": "レーザーテック",
@@ -330,10 +329,10 @@
     {
       "ticker": "6754",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:07",
+        "fetched_at": "2026-06-01T16:20:42",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -467,10 +466,9 @@
         "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
       },
       "earnings": {
-        "next_earnings_date": "2026-07-29",
-        "days_until": 57,
-        "source": "earnings_dates",
-        "advice": "あと57日。通常運用可"
+        "next_earnings_date": null,
+        "days_until": null,
+        "advice": "決算日不明（手動確認推奨）"
       },
       "verdict": "🟢 買いサイン強い",
       "name": "アンリツ",
@@ -479,10 +477,10 @@
     {
       "ticker": "4368",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:09",
+        "fetched_at": "2026-06-01T16:20:44",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -619,9 +617,9 @@
       },
       "earnings": {
         "next_earnings_date": "2026-07-30",
-        "days_until": 58,
+        "days_until": 59,
         "source": "calendar",
-        "advice": "あと58日。通常運用可"
+        "advice": "あと59日。通常運用可"
       },
       "verdict": "🟢 買いサイン強い",
       "name": "扶桑化学工業",
@@ -630,10 +628,10 @@
     {
       "ticker": "4971",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:10",
+        "fetched_at": "2026-06-01T16:20:46",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -778,10 +776,10 @@
     {
       "ticker": "4099",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:12",
+        "fetched_at": "2026-06-01T16:20:48",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -916,9 +914,9 @@
       },
       "earnings": {
         "next_earnings_date": "2026-07-24",
-        "days_until": 52,
+        "days_until": 53,
         "source": "calendar",
-        "advice": "あと52日。通常運用可"
+        "advice": "あと53日。通常運用可"
       },
       "verdict": "🟢 買いサイン強い",
       "name": "四国化成HD",
@@ -927,10 +925,10 @@
     {
       "ticker": "4182",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:13",
+        "fetched_at": "2026-06-01T16:20:49",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -1065,9 +1063,9 @@
       },
       "earnings": {
         "next_earnings_date": "2026-08-07",
-        "days_until": 66,
+        "days_until": 67,
         "source": "calendar",
-        "advice": "あと66日。通常運用可"
+        "advice": "あと67日。通常運用可"
       },
       "verdict": "🟢 買いサイン強い",
       "name": "三菱ガス化学",
@@ -1076,10 +1074,10 @@
     {
       "ticker": "7995",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:14",
+        "fetched_at": "2026-06-01T16:20:50",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -1225,10 +1223,10 @@
     {
       "ticker": "5741",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:18",
+        "fetched_at": "2026-06-01T16:20:52",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -1369,9 +1367,9 @@
       },
       "earnings": {
         "next_earnings_date": "2026-08-06",
-        "days_until": 65,
+        "days_until": 66,
         "source": "calendar",
-        "advice": "あと65日。通常運用可"
+        "advice": "あと66日。通常運用可"
       },
       "verdict": "🚨 売却シグナル（保有中なら売却検討）",
       "name": "UACJ",
@@ -1380,10 +1378,10 @@
     {
       "ticker": "6503",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:19",
+        "fetched_at": "2026-06-01T16:20:54",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -1529,10 +1527,10 @@
     {
       "ticker": "6506",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:21",
+        "fetched_at": "2026-06-01T16:20:56",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -1674,9 +1672,9 @@
       },
       "earnings": {
         "next_earnings_date": "2026-07-10",
-        "days_until": 38,
+        "days_until": 39,
         "source": "calendar",
-        "advice": "あと38日。通常運用可"
+        "advice": "あと39日。通常運用可"
       },
       "verdict": "🚨 売却シグナル（保有中なら売却検討）",
       "name": "安川電機",
@@ -1685,10 +1683,10 @@
     {
       "ticker": "9412",
       "data_freshness": {
-        "fetched_at": "2026-06-02T01:17:22",
+        "fetched_at": "2026-06-01T16:20:57",
         "last_daily_bar_date": "2026-06-01",
-        "days_old": 1,
-        "status": "前営業日終値（確定値）",
+        "days_old": 0,
+        "status": "本日場後（確定値・約15-20分遅延あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
@@ -1829,16 +1827,15 @@
         "interpretation": "上下ともゾーンあり → レンジ展開想定"
       },
       "earnings": {
-        "next_earnings_date": "2026-08-05",
-        "days_until": 64,
-        "source": "earnings_dates",
-        "advice": "あと64日。通常運用可"
+        "next_earnings_date": null,
+        "days_until": null,
+        "advice": "決算日不明（手動確認推奨）"
       },
       "verdict": "🚨 売却シグナル（保有中なら売却検討）",
       "name": "スカパーJSAT",
       "note": "衛星通信・防衛宇宙テーマ"
     }
   ],
-  "generated_at": "2026-06-01T16:17:24.595553Z",
+  "generated_at": "2026-06-01T16:20:59.398470Z",
   "generated_by": "github-actions"
 }
