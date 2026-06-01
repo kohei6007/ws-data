@@ -43,7 +43,115 @@ def fetch(ticker_jp: str, interval: str, period: str) -> pd.DataFrame:
     df = yf.Ticker(symbol).history(period=period, interval=interval, auto_adjust=False)
     if df.empty:
         raise RuntimeError(f"データ取得失敗: {symbol} ({interval})")
-    return df[["Open", "High", "Low", "Close", "Volume"]].copy()
+    df = df[["Open", "High", "Low", "Close", "Volume"]].copy()
+
+    # 日足のみ: 最新バーが NaN なら kabutan から補完（yfinance 遅延対策）
+    if interval == "1d" and not ticker_jp.startswith("^") and "." not in ticker_jp:
+        df = _inject_kabutan_close_if_missing(df, ticker_jp)
+    return df
+
+
+# ============================================================
+# kabutan 補完（yfinance 遅延対策）
+# ============================================================
+
+def fetch_kabutan_latest_ohlc(code: str) -> dict | None:
+    """株探の個別銘柄ページから最新営業日の OHLCV を抽出。失敗時 None。"""
+    import urllib.request
+    import re as _re
+    url = f"https://kabutan.jp/stock/?code={code}"
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                              "AppleWebKit/537.36 (KHTML, like Gecko) "
+                              "Chrome/120.0 Safari/537.36"
+            },
+        )
+        with urllib.request.urlopen(req, timeout=10) as r:
+            body = r.read().decode("utf-8", errors="ignore")
+    except Exception:
+        return None
+
+    text = _re.sub(r"<script[^>]*>.*?</script>", "", body, flags=_re.DOTALL)
+    text = _re.sub(r"<style[^>]*>.*?</style>", "", text, flags=_re.DOTALL)
+    text = _re.sub(r"<[^>]+>", " ", text)
+    text = text.replace("&nbsp;", " ").replace("&amp;", "&")
+    text = _re.sub(r"\s+", " ", text)
+
+    m = _re.search(
+        r"(\d{2})月(\d{2})日\s*始値\s*([\d,]+)\s*\([^)]*\)\s*"
+        r"高値\s*([\d,]+)\s*\([^)]*\)\s*"
+        r"安値\s*([\d,]+)\s*\([^)]*\)\s*"
+        r"終値\s*([\d,]+)\s*\([^)]*\)\s*"
+        r"出来高\s*([\d,]+)",
+        text,
+    )
+    if not m:
+        return None
+
+    def num(s: str) -> float:
+        return float(s.replace(",", ""))
+
+    return {
+        "month": int(m.group(1)),
+        "day": int(m.group(2)),
+        "open": num(m.group(3)),
+        "high": num(m.group(4)),
+        "low": num(m.group(5)),
+        "close": num(m.group(6)),
+        "volume": int(m.group(7).replace(",", "")),
+    }
+
+
+def _inject_kabutan_close_if_missing(df: pd.DataFrame, ticker: str) -> pd.DataFrame:
+    """最新バー（または直近営業日）が NaN/欠損なら kabutan から OHLCV を取得して上書き/追加"""
+    if df.empty:
+        return df
+
+    last_close = df["Close"].iloc[-1]
+    last_idx = df.index[-1]
+    last_date = last_idx.date() if hasattr(last_idx, "date") else None
+    today = date.today()
+
+    if pd.notna(last_close):
+        if last_date and (today - last_date).days <= 1:
+            return df
+
+    kabu = fetch_kabutan_latest_ohlc(ticker)
+    if not kabu:
+        return df
+
+    now = datetime.now()
+    year = now.year
+    k_date = date(year, kabu["month"], kabu["day"])
+    if k_date > today:
+        k_date = date(year - 1, kabu["month"], kabu["day"])
+
+    if last_date and k_date < last_date:
+        return df
+
+    new_idx = pd.Timestamp(k_date).tz_localize(df.index.tz) if df.index.tz else pd.Timestamp(k_date)
+    new_row = pd.DataFrame(
+        {
+            "Open": [kabu["open"]],
+            "High": [kabu["high"]],
+            "Low": [kabu["low"]],
+            "Close": [kabu["close"]],
+            "Volume": [kabu["volume"]],
+        },
+        index=[new_idx],
+    )
+
+    if new_idx in df.index:
+        df.loc[new_idx, ["Open", "High", "Low", "Close", "Volume"]] = [
+            kabu["open"], kabu["high"], kabu["low"], kabu["close"], kabu["volume"]
+        ]
+    else:
+        df = pd.concat([df, new_row])
+
+    return df
 
 
 # ============================================================
