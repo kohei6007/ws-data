@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-06-03T09:07:08",
+  "analyzed_at": "2026-06-03T11:27:31",
   "market": {
     "nikkei225": {
       "label": "イージー（勝率高）",
@@ -24,7 +24,7 @@
     {
       "ticker": "8035",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:08",
+        "fetched_at": "2026-06-03T11:27:32",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -202,7 +202,7 @@
     {
       "ticker": "6920",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:09",
+        "fetched_at": "2026-06-03T11:27:32",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -378,7 +378,7 @@
     {
       "ticker": "6754",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:10",
+        "fetched_at": "2026-06-03T11:27:33",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -549,7 +549,7 @@
     {
       "ticker": "4368",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:11",
+        "fetched_at": "2026-06-03T11:27:35",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -720,7 +720,7 @@
     {
       "ticker": "4971",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:12",
+        "fetched_at": "2026-06-03T11:27:35",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -891,7 +891,7 @@
     {
       "ticker": "4099",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:13",
+        "fetched_at": "2026-06-03T11:27:36",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1069,7 +1069,7 @@
     {
       "ticker": "4182",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:13",
+        "fetched_at": "2026-06-03T11:27:37",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1249,7 +1249,7 @@
     {
       "ticker": "7995",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:14",
+        "fetched_at": "2026-06-03T11:27:37",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1427,7 +1427,7 @@
     {
       "ticker": "5741",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:15",
+        "fetched_at": "2026-06-03T11:27:38",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1597,7 +1597,7 @@
     {
       "ticker": "6503",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:15",
+        "fetched_at": "2026-06-03T11:27:39",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1768,7 +1768,7 @@
     {
       "ticker": "6506",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:16",
+        "fetched_at": "2026-06-03T11:27:40",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1938,7 +1938,7 @@
     {
       "ticker": "9412",
       "data_freshness": {
-        "fetched_at": "2026-06-03T09:07:17",
+        "fetched_at": "2026-06-03T11:27:41",
         "last_daily_bar_date": "2026-06-03",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -2108,6 +2108,6 @@
       "note": "衛星通信・防衛宇宙テーマ"
     }
   ],
-  "generated_at": "2026-06-03T09:07:18.520658Z",
+  "generated_at": "2026-06-03T11:27:42.192573Z",
   "generated_by": "github-actions"
 }
