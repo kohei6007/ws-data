@@ -621,10 +621,140 @@ def check_earnings(ticker: str, warn_days: int = 7) -> dict:
 
 
 # ============================================================
+# ファンダメンタル評価（マニュアル §4 業績好調基準）
+# ============================================================
+
+def evaluate_fundamentals(ticker: str) -> dict:
+    """yfinance info から PER/PBR/ROE/成長率を取得し、ファンダスコアを算出"""
+    symbol = ticker if "." in ticker else f"{ticker}.T"
+    t = yf.Ticker(symbol)
+    try:
+        info = t.info
+    except Exception:
+        info = {}
+
+    market_cap = info.get("marketCap") or 0
+    per_trailing = info.get("trailingPE")
+    per_forward = info.get("forwardPE")
+    pbr = info.get("priceToBook")
+    div_yield = info.get("dividendYield")
+    roe = info.get("returnOnEquity")
+    op_margin = info.get("operatingMargins")
+    rev_growth = info.get("revenueGrowth")
+    eps_growth = info.get("earningsGrowth") or info.get("earningsQuarterlyGrowth")
+
+    score = 0
+    reasons = []
+    penalties = []
+
+    per = per_forward if per_forward and per_forward > 0 else per_trailing
+    if per and per > 0:
+        if per < 10:
+            score += 1
+            reasons.append(f"+1点: PER {per:.1f}倍 = 割安")
+        elif per < 25:
+            score += 1
+            reasons.append(f"+1点: PER {per:.1f}倍 = 適正範囲（マニュアル想定）")
+        elif per <= 35:
+            reasons.append(f"+0点: PER {per:.1f}倍 = やや高めだが許容範囲")
+        elif per <= 50:
+            score -= 1
+            penalties.append(f"-1点: PER {per:.1f}倍 = 割高")
+        else:
+            score -= 2
+            penalties.append(f"-2点: PER {per:.1f}倍 = 過大評価")
+    else:
+        reasons.append("PER 不明 or 赤字のため算定不可")
+
+    if eps_growth is not None:
+        eps_pct = eps_growth * 100
+        if eps_pct >= 50:
+            score += 2
+            reasons.append(f"+2点: EPS成長 +{eps_pct:.0f}% = 絶好調")
+        elif eps_pct >= 20:
+            score += 1
+            reasons.append(f"+1点: EPS成長 +{eps_pct:.0f}% = 好調")
+        elif eps_pct >= 0:
+            reasons.append(f"+0点: EPS成長 +{eps_pct:.0f}% = 維持")
+        else:
+            score -= 1
+            penalties.append(f"-1点: EPS成長 {eps_pct:.0f}% = 減益（マニュアル §4 削除要件相当）")
+    else:
+        reasons.append("EPS成長 不明")
+
+    if rev_growth is not None:
+        rev_pct = rev_growth * 100
+        if rev_pct >= 10:
+            score += 1
+            reasons.append(f"+1点: 売上成長 +{rev_pct:.1f}% = 好調")
+        elif rev_pct >= 0:
+            pass
+        else:
+            score -= 1
+            penalties.append(f"-1点: 売上成長 {rev_pct:.1f}% = 減収")
+
+    if roe is not None:
+        roe_pct = roe * 100
+        if roe_pct >= 15:
+            score += 1
+            reasons.append(f"+1点: ROE {roe_pct:.1f}% = 高収益")
+        elif roe_pct < 5:
+            penalties.append(f"  ROE {roe_pct:.1f}% = 低収益（参考）")
+
+    if op_margin is not None:
+        om_pct = op_margin * 100
+        if om_pct >= 20:
+            score += 1
+            reasons.append(f"+1点: 営業利益率 {om_pct:.1f}% = 高採算")
+        elif om_pct >= 10:
+            pass
+        elif om_pct < 5:
+            penalties.append(f"  営業利益率 {om_pct:.1f}% = 低採算（参考）")
+
+    market_cap_oku = round(market_cap / 1e8) if market_cap else 0
+    if market_cap >= 500e9:
+        score += 1
+        reasons.append(f"+1点: 時価総額 {market_cap_oku}億 = §4 大型株要件クリア")
+    elif market_cap > 0:
+        reasons.append(f"  時価総額 {market_cap_oku}億 = §4 基準未満（テクニカル信頼度低下）")
+
+    if per and per > 0:
+        if per < 15:
+            valuation_label = "割安寄り"
+        elif per <= 25:
+            valuation_label = "適正"
+        elif per <= 35:
+            valuation_label = "やや割高"
+        else:
+            valuation_label = "割高"
+    else:
+        valuation_label = "判定不可（赤字 or データなし）"
+
+    return {
+        "market_cap_oku": market_cap_oku,
+        "per_trailing": round(per_trailing, 2) if per_trailing else None,
+        "per_forward": round(per_forward, 2) if per_forward else None,
+        "pbr": round(pbr, 2) if pbr else None,
+        "dividend_yield_pct": round(div_yield, 2) if div_yield else None,
+        "roe_pct": round(roe * 100, 2) if roe is not None else None,
+        "operating_margin_pct": round(op_margin * 100, 2) if op_margin is not None else None,
+        "revenue_growth_pct": round(rev_growth * 100, 2) if rev_growth is not None else None,
+        "eps_growth_pct": round(eps_growth * 100, 2) if eps_growth is not None else None,
+        "fundamental_score": score,
+        "fundamental_score_max_theoretical": 8,
+        "fundamental_score_min_theoretical": -5,
+        "fundamental_reasons": reasons,
+        "fundamental_penalty_reasons": penalties,
+        "valuation_label": valuation_label,
+    }
+
+
+# ============================================================
 # verdict
 # ============================================================
 
-def verdict(buy_score, sell_state, market_label, hard_avoid_flags, soft_warning_flags=None, earnings_days=None, volume_interp=""):
+def verdict(buy_score, sell_state, market_label, hard_avoid_flags, soft_warning_flags=None,
+            earnings_days=None, volume_interp="", fundamental_score=None, valuation_label=""):
     soft_warning_flags = soft_warning_flags or []
     if earnings_days is not None and earnings_days <= 1:
         return "🚨 決算直前 → 新規買いNG・保有売却推奨"
@@ -636,6 +766,18 @@ def verdict(buy_score, sell_state, market_label, hard_avoid_flags, soft_warning_
         return "⛔ 買い見送り推奨（負けパターン該当）"
     if "ハード" in market_label and buy_score < 5:
         return "⛔ 地合いハード × スコア弱い → 買い見送り"
+
+    fund_notes = []
+    if fundamental_score is not None:
+        if fundamental_score >= 4:
+            fund_notes.append(f"ファンダ◎(F:{fundamental_score})")
+        elif fundamental_score <= -2:
+            fund_notes.append(f"⚠️ファンダ弱(F:{fundamental_score})")
+    if valuation_label in ("割高",):
+        fund_notes.append("PER割高")
+    elif valuation_label == "判定不可（赤字 or データなし）":
+        fund_notes.append("PER算定不可(赤字可能性)")
+
     if buy_score >= 7:
         base = "🟢 買いサイン強い"
         notes = []
@@ -645,11 +787,16 @@ def verdict(buy_score, sell_state, market_label, hard_avoid_flags, soft_warning_
             notes.append("急騰中→押し目待ち推奨")
         if earnings_days is not None and earnings_days <= 7:
             notes.append(f"あと{earnings_days}日で決算→短期勝負")
+        notes.extend(fund_notes)
         if notes:
             base += "（" + " / ".join(notes) + "）"
         return base
     if buy_score >= 4:
-        suffix = "（押し目待ち推奨）" if soft_warning_flags else ""
+        notes = []
+        if soft_warning_flags:
+            notes.append("押し目待ち推奨")
+        notes.extend(fund_notes)
+        suffix = ("（" + " / ".join(notes) + "）") if notes else ""
         return f"🟡 買いサイン中程度（条件確認しつつ検討）{suffix}"
     if sell_state.startswith("1次"):
         return "🟡 利確検討（保有中なら部分利確）"
@@ -672,6 +819,7 @@ def analyze_ticker(ticker: str, with_chart: bool = False) -> dict:
     bs = evaluate_buy_sell(daily, weekly, monthly)
     vz = summarize_volume_zones(daily.tail(60))
     ec = check_earnings(ticker)
+    fundamentals = evaluate_fundamentals(ticker)
 
     last_bar_ts = daily.index[-1]
     last_bar_date = last_bar_ts.date() if hasattr(last_bar_ts, "date") else None
@@ -710,6 +858,7 @@ def analyze_ticker(ticker: str, with_chart: bool = False) -> dict:
         "signals": bs,
         "volume_zones": vz,
         "earnings": ec,
+        "fundamentals": fundamentals,
     }
     if with_chart:
         try:
@@ -741,6 +890,8 @@ def full_analysis(tickers: list[str], with_chart: bool = False, market_only: boo
                     soft_warning_flags=r["signals"]["soft_warning_flags"],
                     earnings_days=r["earnings"].get("days_until"),
                     volume_interp=r["volume_zones"]["interpretation"],
+                    fundamental_score=r["fundamentals"].get("fundamental_score"),
+                    valuation_label=r["fundamentals"].get("valuation_label", ""),
                 )
                 output["tickers"].append(r)
             except Exception as e:
