@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-06-09T10:08:53",
+  "analyzed_at": "2026-06-09T14:54:18",
   "market": {
     "nikkei225": {
       "label": "イージー寄りノーマル",
@@ -11,12 +11,12 @@
       "crash_level": "通常"
     },
     "sp500": {
-      "label": "イージー寄りノーマル",
-      "score": 1,
-      "slope_5MA_pct_per_bar": -0.222,
-      "slope_10MA_pct_per_bar": 0.074,
-      "slope_20MA_pct_per_bar": 0.095,
-      "drawdown_from_120d_high_pct": -2.68,
+      "label": "ノーマル寄りハード",
+      "score": -1,
+      "slope_5MA_pct_per_bar": -0.401,
+      "slope_10MA_pct_per_bar": -0.042,
+      "slope_20MA_pct_per_bar": 0.039,
+      "drawdown_from_120d_high_pct": -3.12,
       "crash_level": "通常"
     }
   },
@@ -24,7 +24,7 @@
     {
       "ticker": "8035",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:08:54",
+        "fetched_at": "2026-06-09T14:54:19",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -153,6 +153,21 @@
           "breakdown_days_ago": 1
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 0.22,
+        "ma5_now": 59790.0,
+        "self_mean_positive_dev_pct": 3.03,
+        "self_p80_dev_pct": 3.21,
+        "self_p90_dev_pct": 5.57,
+        "pullback_threshold_pct": 1.51,
+        "zone": "押し目圏",
+        "pullback_target_price": [
+          59790.0,
+          60387.9
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [],
         "support_zones_below": [
@@ -205,7 +220,7 @@
     {
       "ticker": "6920",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:08:55",
+        "fetched_at": "2026-06-09T14:54:19",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -333,6 +348,21 @@
           "breakdown_days_ago": 1
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -1.88,
+        "ma5_now": 41256.0,
+        "self_mean_positive_dev_pct": 3.59,
+        "self_p80_dev_pct": 4.15,
+        "self_p90_dev_pct": 5.82,
+        "pullback_threshold_pct": 1.79,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          41256.0,
+          41668.56
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           41805.3,
@@ -385,7 +415,7 @@
     {
       "ticker": "6754",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:08:56",
+        "fetched_at": "2026-06-09T14:54:21",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -506,6 +536,21 @@
           "breakdown_days_ago": 3
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -5.48,
+        "ma5_now": 4529.4,
+        "self_mean_positive_dev_pct": 2.97,
+        "self_p80_dev_pct": 3.55,
+        "self_p90_dev_pct": 4.83,
+        "pullback_threshold_pct": 1.49,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          4529.4,
+          4574.69
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           4286.2,
@@ -557,7 +602,7 @@
     {
       "ticker": "4368",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:08:58",
+        "fetched_at": "2026-06-09T14:54:22",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -678,6 +723,21 @@
           "breakdown_days_ago": 3
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -4.95,
+        "ma5_now": 4098.0,
+        "self_mean_positive_dev_pct": 3.2,
+        "self_p80_dev_pct": 2.87,
+        "self_p90_dev_pct": 5.25,
+        "pullback_threshold_pct": 1.6,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          4098.0,
+          4138.98
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           4072.5,
@@ -730,7 +790,7 @@
     {
       "ticker": "4971",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:08:58",
+        "fetched_at": "2026-06-09T14:54:23",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -856,6 +916,21 @@
           "breakdown_days_ago": 3
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -5.5,
+        "ma5_now": 10328.0,
+        "self_mean_positive_dev_pct": 3.66,
+        "self_p80_dev_pct": 4.58,
+        "self_p90_dev_pct": 6.2,
+        "pullback_threshold_pct": 1.83,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          10328.0,
+          10431.28
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           10133.5,
@@ -907,7 +982,7 @@
     {
       "ticker": "4099",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:00",
+        "fetched_at": "2026-06-09T14:54:24",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1028,6 +1103,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -1.54,
+        "ma5_now": 6226.0,
+        "self_mean_positive_dev_pct": 4.01,
+        "self_p80_dev_pct": 3.73,
+        "self_p90_dev_pct": 6.39,
+        "pullback_threshold_pct": 2.0,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          6226.0,
+          6288.26
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           6153.6,
@@ -1080,7 +1170,7 @@
     {
       "ticker": "4182",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:00",
+        "fetched_at": "2026-06-09T14:54:24",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1201,6 +1291,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -7.83,
+        "ma5_now": 5030.0,
+        "self_mean_positive_dev_pct": 3.17,
+        "self_p80_dev_pct": 3.2,
+        "self_p90_dev_pct": 4.56,
+        "pullback_threshold_pct": 1.59,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          5030.0,
+          5080.3
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           4743.5,
@@ -1255,7 +1360,7 @@
     {
       "ticker": "7995",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:01",
+        "fetched_at": "2026-06-09T14:54:25",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1376,6 +1481,21 @@
           "breakdown_days_ago": 3
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -3.83,
+        "ma5_now": 7944.0,
+        "self_mean_positive_dev_pct": 2.47,
+        "self_p80_dev_pct": 3.2,
+        "self_p90_dev_pct": 3.97,
+        "pullback_threshold_pct": 1.23,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          7944.0,
+          8023.44
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           7895.5,
@@ -1426,7 +1546,7 @@
     {
       "ticker": "5741",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:02",
+        "fetched_at": "2026-06-09T14:54:26",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1547,6 +1667,21 @@
           "breakdown_days_ago": 3
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -3.53,
+        "ma5_now": 3172.0,
+        "self_mean_positive_dev_pct": 3.13,
+        "self_p80_dev_pct": 3.19,
+        "self_p90_dev_pct": 5.9,
+        "pullback_threshold_pct": 1.57,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          3172.0,
+          3203.72
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           3061.0,
@@ -1598,7 +1733,7 @@
     {
       "ticker": "6503",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:03",
+        "fetched_at": "2026-06-09T14:54:27",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1724,6 +1859,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -1.5,
+        "ma5_now": 5907.6,
+        "self_mean_positive_dev_pct": 2.41,
+        "self_p80_dev_pct": 2.87,
+        "self_p90_dev_pct": 4.11,
+        "pullback_threshold_pct": 1.21,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          5907.6,
+          5966.68
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           5837.8,
@@ -1774,7 +1924,7 @@
     {
       "ticker": "6506",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:04",
+        "fetched_at": "2026-06-09T14:54:28",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -1895,6 +2045,21 @@
           "breakdown_days_ago": 3
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -5.33,
+        "ma5_now": 6755.2,
+        "self_mean_positive_dev_pct": 3.41,
+        "self_p80_dev_pct": 3.53,
+        "self_p90_dev_pct": 5.04,
+        "pullback_threshold_pct": 1.7,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          6755.2,
+          6822.75
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           6400.5,
@@ -1946,7 +2111,7 @@
     {
       "ticker": "9412",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:05",
+        "fetched_at": "2026-06-09T14:54:29",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -2072,6 +2237,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": -6.46,
+        "ma5_now": 3512.0,
+        "self_mean_positive_dev_pct": 3.04,
+        "self_p80_dev_pct": 3.44,
+        "self_p90_dev_pct": 5.75,
+        "pullback_threshold_pct": 1.52,
+        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_target_price": [
+          3512.0,
+          3547.12
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           3336.9,
@@ -2123,7 +2303,7 @@
     {
       "ticker": "8306",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:06",
+        "fetched_at": "2026-06-09T14:54:30",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -2244,6 +2424,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 0.17,
+        "ma5_now": 3174.6,
+        "self_mean_positive_dev_pct": 1.84,
+        "self_p80_dev_pct": 2.0,
+        "self_p90_dev_pct": 3.08,
+        "pullback_threshold_pct": 1.0,
+        "zone": "押し目圏",
+        "pullback_target_price": [
+          3174.6,
+          3206.35
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [],
         "support_zones_below": [
@@ -2294,7 +2489,7 @@
     {
       "ticker": "7186",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:07",
+        "fetched_at": "2026-06-09T14:54:30",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -2414,6 +2609,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 3.27,
+        "ma5_now": 1649.6,
+        "self_mean_positive_dev_pct": 2.06,
+        "self_p80_dev_pct": 2.42,
+        "self_p90_dev_pct": 3.52,
+        "pullback_threshold_pct": 1.03,
+        "zone": "伸び気味（自己80%点超）",
+        "pullback_target_price": [
+          1649.6,
+          1666.1
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [],
         "support_zones_below": [
@@ -2458,14 +2668,14 @@
         "fundamental_penalty_reasons": [],
         "valuation_label": "適正"
       },
-      "verdict": "🟢 買いサイン強い（ファンダ◎(F:4)）",
+      "verdict": "🟢 買いサイン強い（5MA伸び気味→押し目待ち / ファンダ◎(F:4)）",
       "name": "横浜フィナンシャルG",
       "note": "地銀・日銀利上げ/再編、時価1.83兆、純利益1,065億 +28.6%、画像目視で形状ベスト（MA収束の押し目明け）"
     },
     {
       "ticker": "8331",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:08",
+        "fetched_at": "2026-06-09T14:54:31",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -2585,6 +2795,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 2.46,
+        "ma5_now": 2380.4,
+        "self_mean_positive_dev_pct": 2.14,
+        "self_p80_dev_pct": 2.39,
+        "self_p90_dev_pct": 3.78,
+        "pullback_threshold_pct": 1.07,
+        "zone": "伸び気味（自己80%点超）",
+        "pullback_target_price": [
+          2380.4,
+          2404.2
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [],
         "support_zones_below": [
@@ -2629,14 +2854,14 @@
         "fundamental_penalty_reasons": [],
         "valuation_label": "適正"
       },
-      "verdict": "🟢 買いサイン強い（ファンダ◎(F:5)）",
+      "verdict": "🟢 買いサイン強い（5MA伸び気味→押し目待ち / ファンダ◎(F:5)）",
       "name": "千葉銀行",
       "note": "地銀盟主・規模最大、時価1.65兆、純利益940億 +26.6%、配当52円増配"
     },
     {
       "ticker": "5831",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:09",
+        "fetched_at": "2026-06-09T14:54:32",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -2756,6 +2981,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 3.36,
+        "ma5_now": 2898.2,
+        "self_mean_positive_dev_pct": 1.95,
+        "self_p80_dev_pct": 2.11,
+        "self_p90_dev_pct": 3.22,
+        "pullback_threshold_pct": 1.0,
+        "zone": "伸びきり（自己90%点超）",
+        "pullback_target_price": [
+          2898.2,
+          2927.18
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [],
         "support_zones_below": [
@@ -2801,14 +3041,14 @@
         ],
         "valuation_label": "適正"
       },
-      "verdict": "🟢 買いサイン強い",
+      "verdict": "🟢 買いサイン強い（5MA伸びきり→押し目待ち）",
       "name": "しずおかフィナンシャルG",
       "note": "地銀・名古屋銀統合思惑（2028目途）、時価1.54兆、純利益904億 +21.2%"
     },
     {
       "ticker": "5844",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:09",
+        "fetched_at": "2026-06-09T14:54:32",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -2928,6 +3168,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 3.23,
+        "ma5_now": 4543.2,
+        "self_mean_positive_dev_pct": 1.69,
+        "self_p80_dev_pct": 2.0,
+        "self_p90_dev_pct": 2.74,
+        "pullback_threshold_pct": 1.0,
+        "zone": "伸びきり（自己90%点超）",
+        "pullback_target_price": [
+          4543.2,
+          4588.63
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [],
         "support_zones_below": [
@@ -2972,14 +3227,14 @@
         "fundamental_penalty_reasons": [],
         "valuation_label": "やや割高"
       },
-      "verdict": "🟢 買いサイン強い（ファンダ◎(F:5)）",
+      "verdict": "🟢 買いサイン強い（5MA伸びきり→押し目待ち / ファンダ◎(F:5)）",
       "name": "京都フィナンシャルG",
       "note": "含み益・株主還元、時価1.31兆、純利益450億 +23.1%、任天堂・村田等の含み益、政策保有株縮減"
     },
     {
       "ticker": "8354",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:10",
+        "fetched_at": "2026-06-09T14:54:33",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -3099,6 +3354,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 2.62,
+        "ma5_now": 6749.2,
+        "self_mean_positive_dev_pct": 2.19,
+        "self_p80_dev_pct": 2.28,
+        "self_p90_dev_pct": 3.53,
+        "pullback_threshold_pct": 1.09,
+        "zone": "伸び気味（自己80%点超）",
+        "pullback_target_price": [
+          6749.2,
+          6816.69
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [],
         "support_zones_below": [
@@ -3141,14 +3411,14 @@
         "fundamental_penalty_reasons": [],
         "valuation_label": "適正"
       },
-      "verdict": "🟢 買いサイン強い",
+      "verdict": "🟢 買いサイン強い（5MA伸び気味→押し目待ち）",
       "name": "ふくおかフィナンシャルG",
       "note": "地銀・割安高配当、時価1.28兆、純利益854億 +18.4%、PER12.7倍最割安、年間210円配当"
     },
     {
       "ticker": "5830",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:11",
+        "fetched_at": "2026-06-09T14:54:34",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -3274,6 +3544,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 1.41,
+        "ma5_now": 3036.1,
+        "self_mean_positive_dev_pct": 2.11,
+        "self_p80_dev_pct": 2.33,
+        "self_p90_dev_pct": 3.57,
+        "pullback_threshold_pct": 1.05,
+        "zone": "中間",
+        "pullback_target_price": [
+          3036.1,
+          3066.46
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           3096.9,
@@ -3326,7 +3611,7 @@
     {
       "ticker": "5838",
       "data_freshness": {
-        "fetched_at": "2026-06-09T10:09:11",
+        "fetched_at": "2026-06-09T14:54:34",
         "last_daily_bar_date": "2026-06-09",
         "days_old": 0,
         "status": "本日場中（最新バーは未確定・暫定値）",
@@ -3452,6 +3737,21 @@
           "breakdown_days_ago": null
         }
       },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 3.14,
+        "ma5_now": 4957.2,
+        "self_mean_positive_dev_pct": 2.52,
+        "self_p80_dev_pct": 3.03,
+        "self_p90_dev_pct": 3.9,
+        "pullback_threshold_pct": 1.26,
+        "zone": "伸び気味（自己80%点超）",
+        "pullback_target_price": [
+          4957.2,
+          5006.77
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
       "volume_zones": {
         "resistance_zones_above": [
           5997.1,
@@ -3503,6 +3803,6 @@
       "note": "★異質枠：ネット銀・無配・成長株、時価8,638億、純利益712億 +40.3%、ROE8-10%超、親会社楽天Gの動向リスク"
     }
   ],
-  "generated_at": "2026-06-09T10:09:12.202014Z",
+  "generated_at": "2026-06-09T14:54:35.103727Z",
   "generated_by": "github-actions"
 }
