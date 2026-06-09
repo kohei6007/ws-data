@@ -266,6 +266,61 @@ def evaluate_timeframe(df: pd.DataFrame, label: str) -> dict:
 # 買い・売り判定
 # ============================================================
 
+def evaluate_ma5_deviation(daily, lookback=120):
+    """現在の日足5MA乖離(%)を、その銘柄"自身"の過去分布(lookback本≒6ヶ月)と
+    比較して 押し目圏/中間/伸び気味/伸びきり/5MA下 を判定する。
+
+    マニュアル §6「5MAにヨコヨコで近づいたとき=押し目」を、銘柄ごとの
+    ボラティリティに合わせて定量化したもの。固定%閾値を使わず、その銘柄の
+    乖離の80/90パーセンタイルを"伸びすぎライン"として用いる。
+    """
+    import numpy as np
+    d = daily.dropna(subset=["Close"]).copy()
+    d["MA5"] = d["Close"].rolling(5).mean()
+    dev = ((d["Close"] / d["MA5"] - 1) * 100).dropna()
+    if len(dev) < 20:
+        return {"available": False, "reason": "データ不足（20本未満）"}
+
+    window = dev.tail(lookback)
+    cur = float(dev.iloc[-1])
+    pos = window[window > 0]
+    mean_pos = float(pos.mean()) if len(pos) else 0.0
+    p80 = float(np.percentile(window, 80))
+    p90 = float(np.percentile(window, 90))
+    pullback_threshold = max(1.0, mean_pos * 0.5)
+    ma5_now = float(d["MA5"].iloc[-1])
+
+    if cur < 0:
+        zone = "5MA下（押し目以前 or 下落）"
+    elif cur <= pullback_threshold:
+        zone = "押し目圏"
+    elif cur >= p90:
+        zone = "伸びきり（自己90%点超）"
+    elif cur >= p80:
+        zone = "伸び気味（自己80%点超）"
+    else:
+        zone = "中間"
+
+    return {
+        "available": True,
+        "current_dev_pct": round(cur, 2),
+        "ma5_now": round(ma5_now, 2),
+        "self_mean_positive_dev_pct": round(mean_pos, 2),
+        "self_p80_dev_pct": round(p80, 2),
+        "self_p90_dev_pct": round(p90, 2),
+        "pullback_threshold_pct": round(pullback_threshold, 2),
+        "zone": zone,
+        "pullback_target_price": [
+            round(ma5_now, 2),
+            round(ma5_now * (1 + min(pullback_threshold, 1.0) / 100), 2),
+        ],
+        "note": (
+            "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。"
+            "脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+        ),
+    }
+
+
 def evaluate_buy_sell(daily, weekly, monthly):
     d = add_ma(daily.copy())
     w = add_ma(weekly.copy())
@@ -754,8 +809,14 @@ def evaluate_fundamentals(ticker: str) -> dict:
 # ============================================================
 
 def verdict(buy_score, sell_state, market_label, hard_avoid_flags, soft_warning_flags=None,
-            earnings_days=None, volume_interp="", fundamental_score=None, valuation_label=""):
+            earnings_days=None, volume_interp="", fundamental_score=None, valuation_label="",
+            ma5_dev_zone=""):
     soft_warning_flags = soft_warning_flags or []
+    dev_note = None
+    if ma5_dev_zone.startswith("伸びきり"):
+        dev_note = "5MA伸びきり→押し目待ち"
+    elif ma5_dev_zone.startswith("伸び気味"):
+        dev_note = "5MA伸び気味→押し目待ち"
     if earnings_days is not None and earnings_days <= 1:
         return "🚨 決算直前 → 新規買いNG・保有売却推奨"
     if sell_state.startswith("3次"):
@@ -785,6 +846,8 @@ def verdict(buy_score, sell_state, market_label, hard_avoid_flags, soft_warning_
             notes.append("出来高ゾーン上値重い→慎重に")
         if soft_warning_flags:
             notes.append("急騰中→押し目待ち推奨")
+        if dev_note:
+            notes.append(dev_note)
         if earnings_days is not None and earnings_days <= 7:
             notes.append(f"あと{earnings_days}日で決算→短期勝負")
         notes.extend(fund_notes)
@@ -795,6 +858,8 @@ def verdict(buy_score, sell_state, market_label, hard_avoid_flags, soft_warning_
         notes = []
         if soft_warning_flags:
             notes.append("押し目待ち推奨")
+        if dev_note:
+            notes.append(dev_note)
         notes.extend(fund_notes)
         suffix = ("（" + " / ".join(notes) + "）") if notes else ""
         return f"🟡 買いサイン中程度（条件確認しつつ検討）{suffix}"
@@ -817,6 +882,7 @@ def analyze_ticker(ticker: str, with_chart: bool = False) -> dict:
     tf_weekly = evaluate_timeframe(weekly, "週足")
     tf_monthly = evaluate_timeframe(monthly, "月足")
     bs = evaluate_buy_sell(daily, weekly, monthly)
+    md = evaluate_ma5_deviation(daily)
     vz = summarize_volume_zones(daily.tail(60))
     ec = check_earnings(ticker)
     fundamentals = evaluate_fundamentals(ticker)
@@ -856,6 +922,7 @@ def analyze_ticker(ticker: str, with_chart: bool = False) -> dict:
         },
         "timeframes": {"daily": tf_daily, "weekly": tf_weekly, "monthly": tf_monthly},
         "signals": bs,
+        "ma5_deviation": md,
         "volume_zones": vz,
         "earnings": ec,
         "fundamentals": fundamentals,
@@ -892,6 +959,7 @@ def full_analysis(tickers: list[str], with_chart: bool = False, market_only: boo
                     volume_interp=r["volume_zones"]["interpretation"],
                     fundamental_score=r["fundamentals"].get("fundamental_score"),
                     valuation_label=r["fundamentals"].get("valuation_label", ""),
+                    ma5_dev_zone=r["ma5_deviation"].get("zone", "") if r["ma5_deviation"].get("available") else "",
                 )
                 output["tickers"].append(r)
             except Exception as e:
