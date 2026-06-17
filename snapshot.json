@@ -1,22 +1,22 @@
 {
-  "analyzed_at": "2026-06-16T11:41:21",
+  "analyzed_at": "2026-06-17T01:59:40",
   "market": {
     "nikkei225": {
-      "label": "ノーマル",
-      "score": 0,
-      "slope_5MA_pct_per_bar": -0.201,
-      "slope_10MA_pct_per_bar": 0.033,
-      "slope_20MA_pct_per_bar": 0.305,
+      "label": "イージー（勝率高）",
+      "score": 3,
+      "slope_5MA_pct_per_bar": 1.105,
+      "slope_10MA_pct_per_bar": 0.233,
+      "slope_20MA_pct_per_bar": 0.621,
       "drawdown_from_120d_high_pct": 0.0,
       "crash_level": "通常"
     },
     "sp500": {
-      "label": "ノーマル寄りハード",
-      "score": -2,
-      "slope_5MA_pct_per_bar": -0.434,
-      "slope_10MA_pct_per_bar": -0.234,
-      "slope_20MA_pct_per_bar": -0.047,
-      "drawdown_from_120d_high_pct": NaN,
+      "label": "ノーマル",
+      "score": 0,
+      "slope_5MA_pct_per_bar": 0.088,
+      "slope_10MA_pct_per_bar": -0.154,
+      "slope_20MA_pct_per_bar": 0.022,
+      "drawdown_from_120d_high_pct": -1.29,
       "crash_level": "通常"
     }
   },
@@ -24,24 +24,24 @@
     {
       "ticker": "8035",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:22",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:41",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 70860.0,
-          "candle": "陰線",
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 71920.0,
+          "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 3.082,
-            "MA10": 2.774,
-            "MA20": 1.8,
-            "MA50": 1.255,
-            "MA100": 0.598
+            "MA5": 3.948,
+            "MA10": 2.719,
+            "MA20": 2.094,
+            "MA50": 1.344,
+            "MA100": 0.636
           },
           "ma_direction": {
             "MA5": "up",
@@ -59,14 +59,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 70860.0,
+          "last_close": 71920.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 5.561,
-            "MA10": 4.97,
-            "MA20": 2.532,
-            "MA50": 2.187,
-            "MA100": 0.96
+            "MA5": 5.669,
+            "MA10": 5.029,
+            "MA20": 2.563,
+            "MA50": 2.203,
+            "MA100": 0.969
           },
           "ma_direction": {
             "MA5": "up",
@@ -84,14 +84,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 70860.0,
+          "last_close": 71920.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 8.524,
-            "MA10": 8.548,
-            "MA20": 4.49,
-            "MA50": 2.7,
-            "MA100": 2.676
+            "MA5": 8.667,
+            "MA10": 8.634,
+            "MA20": 4.538,
+            "MA50": 2.723,
+            "MA100": 2.692
           },
           "ma_direction": {
             "MA5": "up",
@@ -108,7 +108,7 @@
         }
       },
       "signals": {
-        "trend_period_bars": 3,
+        "trend_period_bars": 4,
         "buy_score": 9,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
@@ -125,20 +125,20 @@
         "penalty_reasons": [],
         "hard_avoid_flags": [],
         "soft_warning_flags": [
-          "直近5本で+18.3% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+          "直近5本で+16.3% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
         ],
         "avoid_flags": [
-          "直近5本で+18.3% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+          "直近5本で+16.3% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
         ],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 18.26,
+        "surge_pct_last5bars": 16.32,
         "stop_loss_candidates": {
-          "現在値-5%": 67317.0,
-          "直近20日安値": 45030.0,
-          "日足20MA": 57407.0
+          "現在値-5%": 68324.0,
+          "直近20日安値": 47450.0,
+          "日足20MA": 58698.0
         },
-        "last_close": 70860.0,
+        "last_close": 71920.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
@@ -150,16 +150,16 @@
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 5.18,
-        "ma5_now": 67370.0,
+        "current_dev_pct": 3.65,
+        "ma5_now": 69388.0,
         "self_mean_positive_dev_pct": 3.33,
         "self_p80_dev_pct": 3.69,
         "self_p90_dev_pct": 6.23,
-        "pullback_threshold_pct": 1.66,
-        "zone": "伸び気味（自己80%点超）",
+        "pullback_threshold_pct": 1.67,
+        "zone": "中間",
         "pullback_target_price": [
-          67370.0,
-          68043.7
+          69388.0,
+          70081.88
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -180,16 +180,16 @@
       },
       "earnings": {
         "next_earnings_date": "2026-07-30",
-        "days_until": 44,
+        "days_until": 43,
         "source": "calendar",
-        "advice": "あと44日。通常運用可"
+        "advice": "あと43日。通常運用可"
       },
       "fundamentals": {
-        "market_cap_oku": 322310,
-        "per_trailing": 56.62,
-        "per_forward": 55.35,
-        "pbr": 15.57,
-        "dividend_yield_pct": 0.99,
+        "market_cap_oku": 327132,
+        "per_trailing": 57.34,
+        "per_forward": 56.18,
+        "pbr": 15.8,
+        "dividend_yield_pct": 1.02,
         "roe_pct": 29.27,
         "operating_margin_pct": 28.89,
         "revenue_growth_pct": 8.6,
@@ -201,38 +201,38 @@
           "+2点: EPS成長 +50% = 絶好調",
           "+1点: ROE 29.3% = 高収益",
           "+1点: 営業利益率 28.9% = 高採算",
-          "+1点: 時価総額 322310億 = §4 大型株要件クリア"
+          "+1点: 時価総額 327132億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [
-          "-2点: PER 55.4倍 = 過大評価"
+          "-2点: PER 56.2倍 = 過大評価"
         ],
         "valuation_label": "割高"
       },
-      "verdict": "🟢 買いサイン強い（急騰中→押し目待ち推奨 / 5MA伸び気味→押し目待ち / PER割高）",
+      "verdict": "🟢 買いサイン強い（急騰中→押し目待ち推奨 / PER割高）",
       "name": "東京エレクトロン",
       "note": "半導体製造装置（エッチング/成膜）"
     },
     {
       "ticker": "6920",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:23",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:41",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 46570.0,
-          "candle": "陰線",
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 52490.0,
+          "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 1.774,
-            "MA10": 1.309,
-            "MA20": 0.812,
-            "MA50": 0.496,
-            "MA100": 0.261
+            "MA5": 3.572,
+            "MA10": 1.965,
+            "MA20": 1.353,
+            "MA50": 0.645,
+            "MA100": 0.317
           },
           "ma_direction": {
             "MA5": "up",
@@ -250,14 +250,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 46570.0,
+          "last_close": 52490.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 0.325,
-            "MA10": 1.603,
-            "MA20": 1.128,
-            "MA50": 1.88,
-            "MA100": 0.42
+            "MA5": 1.036,
+            "MA10": 1.977,
+            "MA20": 1.331,
+            "MA50": 1.987,
+            "MA100": 0.483
           },
           "ma_direction": {
             "MA5": "up",
@@ -275,14 +275,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 46570.0,
+          "last_close": 52490.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 6.437,
-            "MA10": 10.091,
-            "MA20": 3.531,
-            "MA50": 1.633,
-            "MA100": 2.4
+            "MA5": 7.385,
+            "MA10": 10.703,
+            "MA20": 3.875,
+            "MA50": 1.756,
+            "MA100": 2.491
           },
           "ma_direction": {
             "MA5": "up",
@@ -299,7 +299,7 @@
         }
       },
       "signals": {
-        "trend_period_bars": 3,
+        "trend_period_bars": 4,
         "buy_score": 9,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
@@ -316,24 +316,24 @@
         "penalty_reasons": [],
         "hard_avoid_flags": [],
         "soft_warning_flags": [
-          "直近5本で+15.0% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+          "直近5本で+29.1% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
         ],
         "avoid_flags": [
-          "直近5本で+15.0% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+          "直近5本で+29.1% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
         ],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 15.04,
+        "surge_pct_last5bars": 29.13,
         "stop_loss_candidates": {
-          "現在値-5%": 44241.5,
-          "直近20日安値": 34620.0,
-          "日足20MA": 41097.0
+          "現在値-5%": 49865.5,
+          "直近20日安値": 36720.0,
+          "日足20MA": 41939.0
         },
-        "last_close": 46570.0,
+        "last_close": 52490.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 2,
+          "days_below_ma5_in_last_5": 1,
           "bears_in_last_5": 1,
           "ma5_bearish_breakdown_recent": false,
           "breakdown_days_ago": null
@@ -341,31 +341,31 @@
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 5.98,
-        "ma5_now": 43944.0,
-        "self_mean_positive_dev_pct": 3.83,
-        "self_p80_dev_pct": 4.72,
-        "self_p90_dev_pct": 6.06,
-        "pullback_threshold_pct": 1.91,
-        "zone": "伸び気味（自己80%点超）",
+        "current_dev_pct": 13.34,
+        "ma5_now": 46312.0,
+        "self_mean_positive_dev_pct": 3.96,
+        "self_p80_dev_pct": 4.78,
+        "self_p90_dev_pct": 6.33,
+        "pullback_threshold_pct": 1.98,
+        "zone": "伸びきり（自己90%点超）",
         "pullback_target_price": [
-          43944.0,
-          44383.44
+          46312.0,
+          46775.12
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
       "volume_zones": {
         "resistance_zones_above": [],
         "support_zones_below": [
-          34978.7,
-          35560.0,
-          36722.7,
-          39048.0,
-          40792.0,
-          41373.3,
-          42536.0,
-          43698.7,
-          44861.3
+          34467.0,
+          35193.0,
+          38823.0,
+          39549.0,
+          41001.0,
+          41727.0,
+          42453.0,
+          43905.0,
+          44631.0
         ],
         "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
       },
@@ -375,11 +375,11 @@
         "advice": "決算日不明（手動確認推奨）"
       },
       "fundamentals": {
-        "market_cap_oku": 41741,
-        "per_trailing": 48.21,
-        "per_forward": 42.64,
-        "pbr": 18.51,
-        "dividend_yield_pct": 0.68,
+        "market_cap_oku": 47038,
+        "per_trailing": 54.44,
+        "per_forward": 48.05,
+        "pbr": 20.86,
+        "dividend_yield_pct": 0.71,
         "roe_pct": 44.08,
         "operating_margin_pct": 36.82,
         "revenue_growth_pct": 3.5,
@@ -391,38 +391,38 @@
           "+0点: EPS成長 +19% = 維持",
           "+1点: ROE 44.1% = 高収益",
           "+1点: 営業利益率 36.8% = 高採算",
-          "+1点: 時価総額 41741億 = §4 大型株要件クリア"
+          "+1点: 時価総額 47038億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [
-          "-1点: PER 42.6倍 = 割高"
+          "-1点: PER 48.1倍 = 割高"
         ],
         "valuation_label": "割高"
       },
-      "verdict": "🟢 買いサイン強い（急騰中→押し目待ち推奨 / 5MA伸び気味→押し目待ち / PER割高）",
+      "verdict": "🟢 買いサイン強い（急騰中→押し目待ち推奨 / 5MA伸びきり→押し目待ち / PER割高）",
       "name": "レーザーテック",
       "note": "EUVマスク検査、AI/先端半導体"
     },
     {
       "ticker": "6754",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:25",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:42",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 4096.0,
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 4086.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": -2.396,
-            "MA10": -1.495,
-            "MA20": -0.264,
-            "MA50": 0.572,
-            "MA100": 0.492
+            "MA5": -1.283,
+            "MA10": -1.512,
+            "MA20": -0.273,
+            "MA50": 0.582,
+            "MA100": 0.495
           },
           "ma_direction": {
             "MA5": "down",
@@ -440,14 +440,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 4096.0,
+          "last_close": 4086.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 1.571,
-            "MA10": 3.611,
-            "MA20": 3.292,
-            "MA50": 2.079,
-            "MA100": 1.667
+            "MA5": 1.559,
+            "MA10": 3.604,
+            "MA20": 3.288,
+            "MA50": 2.077,
+            "MA100": 1.665
           },
           "ma_direction": {
             "MA5": "up",
@@ -465,14 +465,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 4096.0,
+          "last_close": 4086.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 13.205,
-            "MA10": 10.21,
-            "MA20": 7.954,
-            "MA50": 3.07,
-            "MA100": 1.499
+            "MA5": 13.184,
+            "MA10": 10.198,
+            "MA20": 7.947,
+            "MA50": 3.066,
+            "MA100": 1.498
           },
           "ma_direction": {
             "MA5": "up",
@@ -489,12 +489,11 @@
         }
       },
       "signals": {
-        "trend_period_bars": 0,
-        "buy_score": 8,
+        "trend_period_bars": 1,
+        "buy_score": 5,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
         "buy_reasons": [
-          "+3点: 日足5MAを陽線突破 + トレンド周期0本（≤8本）",
           "+2点: 週足5MA右肩上がり",
           "+1点: 週足10MA右肩上がり or 横ばい",
           "+1点: 週足20MA右肩上がり or 横ばい",
@@ -514,34 +513,34 @@
         ],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": -4.32,
+        "surge_pct_last5bars": 6.57,
         "stop_loss_candidates": {
-          "現在値-5%": 3891.2,
+          "現在値-5%": 3881.7,
           "直近20日安値": 3621.0,
-          "日足20MA": 4410.85
+          "日足20MA": 4396.1
         },
-        "last_close": 4096.0,
+        "last_close": 4086.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 4,
-          "bears_in_last_5": 3,
+          "days_below_ma5_in_last_5": 3,
+          "bears_in_last_5": 2,
           "ma5_bearish_breakdown_recent": false,
           "breakdown_days_ago": null
         }
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 4.36,
-        "ma5_now": 3925.0,
+        "current_dev_pct": 2.78,
+        "ma5_now": 3975.4,
         "self_mean_positive_dev_pct": 3.02,
         "self_p80_dev_pct": 3.6,
         "self_p90_dev_pct": 4.83,
         "pullback_threshold_pct": 1.51,
-        "zone": "伸び気味（自己80%点超）",
+        "zone": "中間",
         "pullback_target_price": [
-          3925.0,
-          3964.25
+          3975.4,
+          4015.15
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -567,11 +566,11 @@
         "advice": "決算日不明（手動確認推奨）"
       },
       "fundamentals": {
-        "market_cap_oku": 5243,
-        "per_trailing": 44.88,
-        "per_forward": 58.75,
-        "pbr": 3.95,
-        "dividend_yield_pct": 1.27,
+        "market_cap_oku": 5234,
+        "per_trailing": 44.77,
+        "per_forward": 58.65,
+        "pbr": 3.94,
+        "dividend_yield_pct": 1.22,
         "roe_pct": 9.09,
         "operating_margin_pct": 17.63,
         "revenue_growth_pct": 13.2,
@@ -582,10 +581,10 @@
         "fundamental_reasons": [
           "+1点: EPS成長 +25% = 好調",
           "+1点: 売上成長 +13.2% = 好調",
-          "+1点: 時価総額 5243億 = §4 大型株要件クリア"
+          "+1点: 時価総額 5234億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [
-          "-2点: PER 58.7倍 = 過大評価"
+          "-2点: PER 58.6倍 = 過大評価"
         ],
         "valuation_label": "割高"
       },
@@ -596,29 +595,29 @@
     {
       "ticker": "4368",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:27",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:44",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 4100.0,
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 4110.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": -0.208,
-            "MA10": -0.845,
-            "MA20": -0.047,
-            "MA50": 0.651,
-            "MA100": 0.545
+            "MA5": 0.75,
+            "MA10": -0.72,
+            "MA20": 0.166,
+            "MA50": 0.7,
+            "MA100": 0.552
           },
           "ma_direction": {
-            "MA5": "down",
+            "MA5": "up",
             "MA10": "down",
-            "MA20": "flat",
+            "MA20": "up",
             "MA50": "up",
             "MA100": "up"
           },
@@ -631,14 +630,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 4100.0,
-          "candle": "陰線",
+          "last_close": 4110.0,
+          "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 4.148,
-            "MA10": 3.657,
-            "MA20": 2.894,
-            "MA50": 2.583,
-            "MA100": 1.628
+            "MA5": 4.162,
+            "MA10": 3.664,
+            "MA20": 2.898,
+            "MA50": 2.585,
+            "MA100": 1.63
           },
           "ma_direction": {
             "MA5": "up",
@@ -656,14 +655,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 4100.0,
+          "last_close": 4110.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 12.847,
-            "MA10": 11.678,
-            "MA20": 7.413,
-            "MA50": 3.026,
-            "MA100": 2.045
+            "MA5": 12.869,
+            "MA10": 11.692,
+            "MA20": 7.421,
+            "MA50": 3.029,
+            "MA100": 2.047
           },
           "ma_direction": {
             "MA5": "up",
@@ -680,11 +679,13 @@
         }
       },
       "signals": {
-        "trend_period_bars": 2,
-        "buy_score": 7,
+        "trend_period_bars": 3,
+        "buy_score": 9,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
         "buy_reasons": [
+          "+1点: 日足5MA右肩上がり + 終値5MA上",
+          "+1点: 日足20MA右肩上がり",
           "+2点: 週足5MA右肩上がり",
           "+1点: 週足10MA右肩上がり or 横ばい",
           "+1点: 週足20MA右肩上がり or 横ばい",
@@ -694,38 +695,42 @@
         ],
         "penalty_reasons": [],
         "hard_avoid_flags": [],
-        "soft_warning_flags": [],
-        "avoid_flags": [],
+        "soft_warning_flags": [
+          "直近5本で+10.6% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+        ],
+        "avoid_flags": [
+          "直近5本で+10.6% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+        ],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 5.26,
+        "surge_pct_last5bars": 10.63,
         "stop_loss_candidates": {
-          "現在値-5%": 3895.0,
+          "現在値-5%": 3904.5,
           "直近20日安値": 3585.0,
-          "日足20MA": 4151.75
+          "日足20MA": 4169.75
         },
-        "last_close": 4100.0,
+        "last_close": 4110.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 2,
-          "bears_in_last_5": 3,
+          "days_below_ma5_in_last_5": 1,
+          "bears_in_last_5": 2,
           "ma5_bearish_breakdown_recent": false,
           "breakdown_days_ago": null
         }
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 4.11,
-        "ma5_now": 3938.0,
-        "self_mean_positive_dev_pct": 3.32,
+        "current_dev_pct": 2.32,
+        "ma5_now": 4017.0,
+        "self_mean_positive_dev_pct": 3.31,
         "self_p80_dev_pct": 2.97,
         "self_p90_dev_pct": 5.25,
         "pullback_threshold_pct": 1.66,
-        "zone": "伸び気味（自己80%点超）",
+        "zone": "中間",
         "pullback_target_price": [
-          3938.0,
-          3977.38
+          4017.0,
+          4057.17
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -747,16 +752,16 @@
       },
       "earnings": {
         "next_earnings_date": "2026-07-30",
-        "days_until": 44,
+        "days_until": 43,
         "source": "calendar",
-        "advice": "あと44日。通常運用可"
+        "advice": "あと43日。通常運用可"
       },
       "fundamentals": {
-        "market_cap_oku": 4338,
-        "per_trailing": 30.32,
-        "per_forward": 14.26,
-        "pbr": 3.7,
-        "dividend_yield_pct": 0.69,
+        "market_cap_oku": 4348,
+        "per_trailing": 30.38,
+        "per_forward": 14.29,
+        "pbr": 3.71,
+        "dividend_yield_pct": 0.68,
         "roe_pct": 12.94,
         "operating_margin_pct": 22.57,
         "revenue_growth_pct": 11.2,
@@ -769,41 +774,41 @@
           "+1点: EPS成長 +48% = 好調",
           "+1点: 売上成長 +11.2% = 好調",
           "+1点: 営業利益率 22.6% = 高採算",
-          "  時価総額 4338億 = §4 基準未満（テクニカル信頼度低下）"
+          "  時価総額 4348億 = §4 基準未満（テクニカル信頼度低下）"
         ],
         "fundamental_penalty_reasons": [],
         "valuation_label": "割安寄り"
       },
-      "verdict": "🟢 買いサイン強い（5MA伸び気味→押し目待ち / ファンダ◎(F:4)）",
+      "verdict": "🟢 買いサイン強い（急騰中→押し目待ち推奨 / ファンダ◎(F:4)）",
       "name": "扶桑化学工業",
       "note": "半導体研磨材料（時価約4,500億・マニュアル §4 基準未満）"
     },
     {
       "ticker": "4971",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:28",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:44",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 10720.0,
-          "candle": "陰線",
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 11180.0,
+          "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 0.359,
-            "MA10": -0.587,
-            "MA20": -0.047,
-            "MA50": 0.781,
-            "MA100": 0.651
+            "MA5": 2.026,
+            "MA10": -0.282,
+            "MA20": 0.387,
+            "MA50": 0.891,
+            "MA100": 0.699
           },
           "ma_direction": {
             "MA5": "up",
             "MA10": "down",
-            "MA20": "flat",
+            "MA20": "up",
             "MA50": "up",
             "MA100": "up"
           },
@@ -816,14 +821,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 10720.0,
+          "last_close": 11180.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 1.539,
-            "MA10": 3.927,
-            "MA20": 3.456,
-            "MA50": 3.004,
-            "MA100": 1.441
+            "MA5": 1.77,
+            "MA10": 4.06,
+            "MA20": 3.534,
+            "MA50": 3.048,
+            "MA100": 1.468
           },
           "ma_direction": {
             "MA5": "up",
@@ -841,14 +846,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 10720.0,
+          "last_close": 11180.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 15.326,
-            "MA10": 15.328,
-            "MA20": 7.344,
-            "MA50": 3.608,
-            "MA100": 2.585
+            "MA5": 15.746,
+            "MA10": 15.6,
+            "MA20": 7.498,
+            "MA50": 3.675,
+            "MA100": 2.627
           },
           "ma_direction": {
             "MA5": "up",
@@ -865,192 +870,7 @@
         }
       },
       "signals": {
-        "trend_period_bars": 2,
-        "buy_score": 8,
-        "buy_score_max_theoretical": 14,
-        "buy_score_min_theoretical": -7,
-        "buy_reasons": [
-          "+1点: 日足5MA右肩上がり + 終値5MA上",
-          "+2点: 週足5MA右肩上がり",
-          "+1点: 週足10MA右肩上がり or 横ばい",
-          "+1点: 週足20MA右肩上がり or 横ばい",
-          "+1点: 月足5MA右肩上がり",
-          "+1点: 月足10MA右肩上がり",
-          "+1点: 月足20MA右肩上がり"
-        ],
-        "penalty_reasons": [],
-        "hard_avoid_flags": [],
-        "soft_warning_flags": [],
-        "avoid_flags": [],
-        "sell_state": "ホールド",
-        "sell_reasons": [],
-        "surge_pct_last5bars": 9.84,
-        "stop_loss_candidates": {
-          "現在値-5%": 10184.0,
-          "直近20日安値": 8590.0,
-          "日足20MA": 10441.5
-        },
-        "last_close": 10720.0,
-        "diagnostics": {
-          "below_ma5_now": false,
-          "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 2,
-          "bears_in_last_5": 2,
-          "ma5_bearish_breakdown_recent": false,
-          "breakdown_days_ago": null
-        }
-      },
-      "ma5_deviation": {
-        "available": true,
-        "current_dev_pct": 6.77,
-        "ma5_now": 10040.0,
-        "self_mean_positive_dev_pct": 3.87,
-        "self_p80_dev_pct": 4.77,
-        "self_p90_dev_pct": 6.76,
-        "pullback_threshold_pct": 1.93,
-        "zone": "伸びきり（自己90%点超）",
-        "pullback_target_price": [
-          10040.0,
-          10140.4
-        ],
-        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
-      },
-      "volume_zones": {
-        "resistance_zones_above": [
-          10732.5,
-          11131.8,
-          11331.5
-        ],
-        "support_zones_below": [
-          6739.2,
-          6938.8,
-          8336.5,
-          9135.2,
-          9534.5,
-          10133.5
-        ],
-        "interpretation": "上下ともゾーンあり → レンジ展開想定"
-      },
-      "earnings": {
-        "next_earnings_date": null,
-        "days_until": null,
-        "advice": "決算日不明（手動確認推奨）"
-      },
-      "fundamentals": {
-        "market_cap_oku": 1958,
-        "per_trailing": 39.39,
-        "per_forward": 55.29,
-        "pbr": 14.09,
-        "dividend_yield_pct": 1.02,
-        "roe_pct": 12.78,
-        "operating_margin_pct": 15.43,
-        "revenue_growth_pct": 87.7,
-        "eps_growth_pct": -17.1,
-        "fundamental_score": -2,
-        "fundamental_score_max_theoretical": 8,
-        "fundamental_score_min_theoretical": -5,
-        "fundamental_reasons": [
-          "+1点: 売上成長 +87.7% = 好調",
-          "  時価総額 1958億 = §4 基準未満（テクニカル信頼度低下）"
-        ],
-        "fundamental_penalty_reasons": [
-          "-2点: PER 55.3倍 = 過大評価",
-          "-1点: EPS成長 -17% = 減益（マニュアル §4 削除要件相当）"
-        ],
-        "valuation_label": "割高"
-      },
-      "verdict": "🟢 買いサイン強い（5MA伸びきり→押し目待ち / ⚠️ファンダ弱(F:-2) / PER割高）",
-      "name": "メック",
-      "note": "半導体プリント基板用薬品（時価約2,000億・小型株）"
-    },
-    {
-      "ticker": "4099",
-      "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:29",
-        "last_daily_bar_date": "2026-06-16",
-        "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
-        "source": "yfinance (Yahoo Finance、15-20分遅延)"
-      },
-      "timeframes": {
-        "daily": {
-          "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 6610.0,
-          "candle": "陽線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 0.625,
-            "MA10": 0.128,
-            "MA20": 0.475,
-            "MA50": 0.716,
-            "MA100": 0.726
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        },
-        "weekly": {
-          "timeframe": "週足",
-          "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 6610.0,
-          "candle": "陽線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 4.225,
-            "MA10": 3.099,
-            "MA20": 3.288,
-            "MA50": 2.691,
-            "MA100": 1.596
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        },
-        "monthly": {
-          "timeframe": "月足",
-          "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 6610.0,
-          "candle": "陽線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 13.301,
-            "MA10": 12.357,
-            "MA20": 7.074,
-            "MA50": 4.445,
-            "MA100": 2.395
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        }
-      },
-      "signals": {
-        "trend_period_bars": 2,
+        "trend_period_bars": 3,
         "buy_score": 9,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
@@ -1066,21 +886,25 @@
         ],
         "penalty_reasons": [],
         "hard_avoid_flags": [],
-        "soft_warning_flags": [],
-        "avoid_flags": [],
+        "soft_warning_flags": [
+          "直近5本で+23.1% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+        ],
+        "avoid_flags": [
+          "直近5本で+23.1% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+        ],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 7.83,
+        "surge_pct_last5bars": 23.13,
         "stop_loss_candidates": {
-          "現在値-5%": 6279.5,
-          "直近20日安値": 5380.0,
-          "日足20MA": 6219.5
+          "現在値-5%": 10621.0,
+          "直近20日安値": 8590.0,
+          "日足20MA": 10517.5
         },
-        "last_close": 6610.0,
+        "last_close": 11180.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 2,
+          "days_below_ma5_in_last_5": 1,
           "bears_in_last_5": 1,
           "ma5_bearish_breakdown_recent": false,
           "breakdown_days_ago": null
@@ -1088,16 +912,206 @@
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 4.62,
-        "ma5_now": 6318.0,
-        "self_mean_positive_dev_pct": 4.2,
+        "current_dev_pct": 6.88,
+        "ma5_now": 10460.0,
+        "self_mean_positive_dev_pct": 3.91,
+        "self_p80_dev_pct": 4.88,
+        "self_p90_dev_pct": 6.78,
+        "pullback_threshold_pct": 1.95,
+        "zone": "伸びきり（自己90%点超）",
+        "pullback_target_price": [
+          10460.0,
+          10564.6
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
+      "volume_zones": {
+        "resistance_zones_above": [
+          11331.5
+        ],
+        "support_zones_below": [
+          6739.2,
+          6938.8,
+          8336.5,
+          9135.2,
+          9534.5,
+          10133.5,
+          10732.5,
+          11131.8
+        ],
+        "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
+      },
+      "earnings": {
+        "next_earnings_date": null,
+        "days_until": null,
+        "advice": "決算日不明（手動確認推奨）"
+      },
+      "fundamentals": {
+        "market_cap_oku": 2042,
+        "per_trailing": 41.06,
+        "per_forward": 57.67,
+        "pbr": 14.69,
+        "dividend_yield_pct": 1.03,
+        "roe_pct": 12.78,
+        "operating_margin_pct": 15.43,
+        "revenue_growth_pct": 87.7,
+        "eps_growth_pct": -17.1,
+        "fundamental_score": -2,
+        "fundamental_score_max_theoretical": 8,
+        "fundamental_score_min_theoretical": -5,
+        "fundamental_reasons": [
+          "+1点: 売上成長 +87.7% = 好調",
+          "  時価総額 2042億 = §4 基準未満（テクニカル信頼度低下）"
+        ],
+        "fundamental_penalty_reasons": [
+          "-2点: PER 57.7倍 = 過大評価",
+          "-1点: EPS成長 -17% = 減益（マニュアル §4 削除要件相当）"
+        ],
+        "valuation_label": "割高"
+      },
+      "verdict": "🟢 買いサイン強い（急騰中→押し目待ち推奨 / 5MA伸びきり→押し目待ち / ⚠️ファンダ弱(F:-2) / PER割高）",
+      "name": "メック",
+      "note": "半導体プリント基板用薬品（時価約2,000億・小型株）"
+    },
+    {
+      "ticker": "4099",
+      "data_freshness": {
+        "fetched_at": "2026-06-17T01:59:45",
+        "last_daily_bar_date": "2026-06-17",
+        "days_old": 0,
+        "status": "本日深夜（前日確定値の可能性あり）",
+        "source": "yfinance (Yahoo Finance、15-20分遅延)"
+      },
+      "timeframes": {
+        "daily": {
+          "timeframe": "日足",
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 6680.0,
+          "candle": "陽線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 1.398,
+            "MA10": 0.345,
+            "MA20": 0.713,
+            "MA50": 0.793,
+            "MA100": 0.742
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        },
+        "weekly": {
+          "timeframe": "週足",
+          "last_bar_datetime": "2026-06-15T00:00:00+09:00",
+          "last_close": 6680.0,
+          "candle": "陽線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 4.29,
+            "MA10": 3.134,
+            "MA20": 3.306,
+            "MA50": 2.702,
+            "MA100": 1.602
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        },
+        "monthly": {
+          "timeframe": "月足",
+          "last_bar_datetime": "2026-06-01T00:00:00+09:00",
+          "last_close": 6680.0,
+          "candle": "陽線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 13.399,
+            "MA10": 12.419,
+            "MA20": 7.11,
+            "MA50": 4.464,
+            "MA100": 2.406
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        }
+      },
+      "signals": {
+        "trend_period_bars": 3,
+        "buy_score": 9,
+        "buy_score_max_theoretical": 14,
+        "buy_score_min_theoretical": -7,
+        "buy_reasons": [
+          "+1点: 日足5MA右肩上がり + 終値5MA上",
+          "+1点: 日足20MA右肩上がり",
+          "+2点: 週足5MA右肩上がり",
+          "+1点: 週足10MA右肩上がり or 横ばい",
+          "+1点: 週足20MA右肩上がり or 横ばい",
+          "+1点: 月足5MA右肩上がり",
+          "+1点: 月足10MA右肩上がり",
+          "+1点: 月足20MA右肩上がり"
+        ],
+        "penalty_reasons": [],
+        "hard_avoid_flags": [],
+        "soft_warning_flags": [
+          "直近5本で+11.7% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+        ],
+        "avoid_flags": [
+          "直近5本で+11.7% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+        ],
+        "sell_state": "ホールド",
+        "sell_reasons": [],
+        "surge_pct_last5bars": 11.71,
+        "stop_loss_candidates": {
+          "現在値-5%": 6346.0,
+          "直近20日安値": 5560.0,
+          "日足20MA": 6277.5
+        },
+        "last_close": 6680.0,
+        "diagnostics": {
+          "below_ma5_now": false,
+          "above_ma5_now": true,
+          "days_below_ma5_in_last_5": 1,
+          "bears_in_last_5": 0,
+          "ma5_bearish_breakdown_recent": false,
+          "breakdown_days_ago": null
+        }
+      },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 3.44,
+        "ma5_now": 6458.0,
+        "self_mean_positive_dev_pct": 4.18,
         "self_p80_dev_pct": 4.21,
         "self_p90_dev_pct": 6.53,
-        "pullback_threshold_pct": 2.1,
-        "zone": "伸び気味（自己80%点超）",
+        "pullback_threshold_pct": 2.09,
+        "zone": "中間",
         "pullback_target_price": [
-          6318.0,
-          6381.18
+          6458.0,
+          6522.58
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -1118,16 +1132,16 @@
       },
       "earnings": {
         "next_earnings_date": "2026-07-24",
-        "days_until": 38,
+        "days_until": 37,
         "source": "calendar",
-        "advice": "あと38日。通常運用可"
+        "advice": "あと37日。通常運用可"
       },
       "fundamentals": {
-        "market_cap_oku": 2859,
-        "per_trailing": 34.19,
-        "per_forward": 35.07,
-        "pbr": 2.96,
-        "dividend_yield_pct": 0.67,
+        "market_cap_oku": 2889,
+        "per_trailing": 34.61,
+        "per_forward": 35.44,
+        "pbr": 2.99,
+        "dividend_yield_pct": 0.68,
         "roe_pct": 10.46,
         "operating_margin_pct": 21.35,
         "revenue_growth_pct": 18.2,
@@ -1139,41 +1153,41 @@
           "+2点: EPS成長 +63% = 絶好調",
           "+1点: 売上成長 +18.2% = 好調",
           "+1点: 営業利益率 21.4% = 高採算",
-          "  時価総額 2859億 = §4 基準未満（テクニカル信頼度低下）"
+          "  時価総額 2889億 = §4 基準未満（テクニカル信頼度低下）"
         ],
         "fundamental_penalty_reasons": [
-          "-1点: PER 35.1倍 = 割高"
+          "-1点: PER 35.4倍 = 割高"
         ],
         "valuation_label": "割高"
       },
-      "verdict": "🟢 買いサイン強い（5MA伸び気味→押し目待ち / PER割高）",
+      "verdict": "🟢 買いサイン強い（急騰中→押し目待ち推奨 / PER割高）",
       "name": "四国化成HD",
       "note": "半導体用イミダゾール+住宅材、業績絶好調(売上+18%, 営業利益率21%)、§4基準未満(2,703億)"
     },
     {
       "ticker": "4182",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:30",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:46",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 5090.0,
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 5073.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": -0.277,
-            "MA10": -1.051,
-            "MA20": 0.172,
-            "MA50": 0.499,
-            "MA100": 0.438
+            "MA5": 1.275,
+            "MA10": -0.763,
+            "MA20": 0.422,
+            "MA50": 0.584,
+            "MA100": 0.451
           },
           "ma_direction": {
-            "MA5": "down",
+            "MA5": "up",
             "MA10": "down",
             "MA20": "up",
             "MA50": "up",
@@ -1182,20 +1196,20 @@
           "above_ma": {
             "MA5": true,
             "MA10": true,
-            "MA20": true
+            "MA20": false
           }
         },
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 5090.0,
+          "last_close": 5073.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 2.937,
-            "MA10": 2.826,
-            "MA20": 2.624,
-            "MA50": 1.853,
-            "MA100": 0.742
+            "MA5": 2.919,
+            "MA10": 2.816,
+            "MA20": 2.619,
+            "MA50": 1.85,
+            "MA100": 0.741
           },
           "ma_direction": {
             "MA5": "up",
@@ -1213,14 +1227,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 5090.0,
+          "last_close": 5073.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 11.335,
-            "MA10": 7.881,
-            "MA20": 3.494,
-            "MA50": 2.192,
-            "MA100": 0.733
+            "MA5": 11.308,
+            "MA10": 7.866,
+            "MA20": 3.487,
+            "MA50": 2.189,
+            "MA100": 0.731
           },
           "ma_direction": {
             "MA5": "up",
@@ -1237,11 +1251,12 @@
         }
       },
       "signals": {
-        "trend_period_bars": 2,
-        "buy_score": 8,
+        "trend_period_bars": 3,
+        "buy_score": 9,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
         "buy_reasons": [
+          "+1点: 日足5MA右肩上がり + 終値5MA上",
           "+1点: 日足20MA右肩上がり",
           "+2点: 週足5MA右肩上がり",
           "+1点: 週足10MA右肩上がり or 横ばい",
@@ -1252,38 +1267,42 @@
         ],
         "penalty_reasons": [],
         "hard_avoid_flags": [],
-        "soft_warning_flags": [],
-        "avoid_flags": [],
+        "soft_warning_flags": [
+          "直近5本で+14.6% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+        ],
+        "avoid_flags": [
+          "直近5本で+14.6% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+        ],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 9.79,
+        "surge_pct_last5bars": 14.62,
         "stop_loss_candidates": {
-          "現在値-5%": 4835.5,
+          "現在値-5%": 4819.35,
           "直近20日安値": 4200.0,
-          "日足20MA": 5072.8
+          "日足20MA": 5095.8
         },
-        "last_close": 5090.0,
+        "last_close": 5073.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 2,
-          "bears_in_last_5": 1,
+          "days_below_ma5_in_last_5": 1,
+          "bears_in_last_5": 0,
           "ma5_bearish_breakdown_recent": false,
           "breakdown_days_ago": null
         }
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 6.37,
-        "ma5_now": 4785.2,
+        "current_dev_pct": 3.22,
+        "ma5_now": 4914.6,
         "self_mean_positive_dev_pct": 3.4,
         "self_p80_dev_pct": 3.36,
         "self_p90_dev_pct": 6.12,
         "pullback_threshold_pct": 1.7,
-        "zone": "伸びきり（自己90%点超）",
+        "zone": "中間",
         "pullback_target_price": [
-          4785.2,
-          4833.05
+          4914.6,
+          4963.75
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -1305,16 +1324,16 @@
       },
       "earnings": {
         "next_earnings_date": "2026-08-07",
-        "days_until": 52,
+        "days_until": 51,
         "source": "calendar",
-        "advice": "あと52日。通常運用可"
+        "advice": "あと51日。通常運用可"
       },
       "fundamentals": {
-        "market_cap_oku": 9925,
+        "market_cap_oku": 9892,
         "per_trailing": null,
-        "per_forward": 18.42,
+        "per_forward": 18.36,
         "pbr": 1.53,
-        "dividend_yield_pct": 2.18,
+        "dividend_yield_pct": 2.16,
         "roe_pct": -4.96,
         "operating_margin_pct": 3.7,
         "revenue_growth_pct": -0.9,
@@ -1325,7 +1344,7 @@
         "fundamental_reasons": [
           "+1点: PER 18.4倍 = 適正範囲（マニュアル想定）",
           "EPS成長 不明",
-          "+1点: 時価総額 9925億 = §4 大型株要件クリア"
+          "+1点: 時価総額 9892億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [
           "-1点: 売上成長 -0.9% = 減収",
@@ -1334,34 +1353,34 @@
         ],
         "valuation_label": "適正"
       },
-      "verdict": "🟢 買いサイン強い（5MA伸びきり→押し目待ち）",
+      "verdict": "🟢 買いサイン強い（急騰中→押し目待ち推奨）",
       "name": "三菱ガス化学",
       "note": "半導体部材・電子材料・プリント基板テーマ、時価1.16兆円、買いサイン強(9/14)、来期予想売上+13.8%/経常+27.1%/最終黒転"
     },
     {
       "ticker": "7995",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:32",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:47",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 7940.0,
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 7980.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": -0.161,
-            "MA10": -0.625,
-            "MA20": 0.687,
-            "MA50": 0.959,
-            "MA100": 0.625
+            "MA5": 0.416,
+            "MA10": -0.595,
+            "MA20": 0.637,
+            "MA50": 0.983,
+            "MA100": 0.63
           },
           "ma_direction": {
-            "MA5": "down",
+            "MA5": "up",
             "MA10": "down",
             "MA20": "up",
             "MA50": "up",
@@ -1376,14 +1395,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 7940.0,
+          "last_close": 7980.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 6.734,
-            "MA10": 5.42,
-            "MA20": 3.533,
-            "MA50": 2.351,
-            "MA100": 1.152
+            "MA5": 6.766,
+            "MA10": 5.438,
+            "MA20": 3.543,
+            "MA50": 2.356,
+            "MA100": 1.155
           },
           "ma_direction": {
             "MA5": "up",
@@ -1401,14 +1420,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 7940.0,
+          "last_close": 7980.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 11.694,
-            "MA10": 8.325,
-            "MA20": 4.434,
-            "MA50": 2.282,
-            "MA100": 1.204
+            "MA5": 11.74,
+            "MA10": 8.35,
+            "MA20": 4.448,
+            "MA50": 2.288,
+            "MA100": 1.208
           },
           "ma_direction": {
             "MA5": "up",
@@ -1425,11 +1444,12 @@
         }
       },
       "signals": {
-        "trend_period_bars": 2,
-        "buy_score": 8,
+        "trend_period_bars": 3,
+        "buy_score": 9,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
         "buy_reasons": [
+          "+1点: 日足5MA右肩上がり + 終値5MA上",
           "+1点: 日足20MA右肩上がり",
           "+2点: 週足5MA右肩上がり",
           "+1点: 週足10MA右肩上がり or 横ばい",
@@ -1444,17 +1464,17 @@
         "avoid_flags": [],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 3.93,
+        "surge_pct_last5bars": 5.7,
         "stop_loss_candidates": {
-          "現在値-5%": 7543.0,
-          "直近20日安値": 6850.0,
-          "日足20MA": 7851.0
+          "現在値-5%": 7581.0,
+          "直近20日安値": 7180.0,
+          "日足20MA": 7888.0
         },
-        "last_close": 7940.0,
+        "last_close": 7980.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 2,
+          "days_below_ma5_in_last_5": 1,
           "bears_in_last_5": 2,
           "ma5_bearish_breakdown_recent": false,
           "breakdown_days_ago": null
@@ -1462,16 +1482,16 @@
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 2.74,
-        "ma5_now": 7728.0,
-        "self_mean_positive_dev_pct": 2.45,
+        "current_dev_pct": 2.12,
+        "ma5_now": 7814.0,
+        "self_mean_positive_dev_pct": 2.48,
         "self_p80_dev_pct": 3.2,
         "self_p90_dev_pct": 3.97,
-        "pullback_threshold_pct": 1.23,
+        "pullback_threshold_pct": 1.24,
         "zone": "中間",
         "pullback_target_price": [
-          7728.0,
-          7805.28
+          7814.0,
+          7892.14
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -1497,11 +1517,11 @@
         "advice": "決算日不明（手動確認推奨）"
       },
       "fundamentals": {
-        "market_cap_oku": 1399,
-        "per_trailing": 27.25,
-        "per_forward": 21.81,
-        "pbr": 2.62,
-        "dividend_yield_pct": 2.19,
+        "market_cap_oku": 1406,
+        "per_trailing": 27.39,
+        "per_forward": 21.92,
+        "pbr": 2.63,
+        "dividend_yield_pct": 2.14,
         "roe_pct": 9.86,
         "operating_margin_pct": 14.83,
         "revenue_growth_pct": 7.5,
@@ -1510,8 +1530,8 @@
         "fundamental_score_max_theoretical": 8,
         "fundamental_score_min_theoretical": -5,
         "fundamental_reasons": [
-          "+1点: PER 21.8倍 = 適正範囲（マニュアル想定）",
-          "  時価総額 1399億 = §4 基準未満（テクニカル信頼度低下）"
+          "+1点: PER 21.9倍 = 適正範囲（マニュアル想定）",
+          "  時価総額 1406億 = §4 基準未満（テクニカル信頼度低下）"
         ],
         "fundamental_penalty_reasons": [
           "-1点: EPS成長 -18% = 減益（マニュアル §4 削除要件相当）"
@@ -1525,24 +1545,24 @@
     {
       "ticker": "5741",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:33",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:48",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 2913.0,
-          "candle": "陰線",
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 2953.0,
+          "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": -1.17,
-            "MA10": -1.067,
-            "MA20": -0.21,
-            "MA50": 0.415,
-            "MA100": 0.252
+            "MA5": -0.655,
+            "MA10": -1.075,
+            "MA20": -0.233,
+            "MA50": 0.376,
+            "MA100": 0.251
           },
           "ma_direction": {
             "MA5": "down",
@@ -1552,7 +1572,7 @@
             "MA100": "up"
           },
           "above_ma": {
-            "MA5": false,
+            "MA5": true,
             "MA10": false,
             "MA20": false
           }
@@ -1560,14 +1580,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 2913.0,
+          "last_close": 2953.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 1.31,
-            "MA10": 1.848,
-            "MA20": 1.395,
-            "MA50": 1.754,
-            "MA100": 1.281
+            "MA5": 1.378,
+            "MA10": 1.884,
+            "MA20": 1.414,
+            "MA50": 1.764,
+            "MA100": 1.287
           },
           "ma_direction": {
             "MA5": "up",
@@ -1585,14 +1605,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 2913.0,
+          "last_close": 2953.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 5.837,
-            "MA10": 7.607,
-            "MA20": 5.136,
-            "MA50": 4.185,
-            "MA100": 2.58
+            "MA5": 5.925,
+            "MA10": 7.661,
+            "MA20": 5.169,
+            "MA50": 4.204,
+            "MA100": 2.592
           },
           "ma_direction": {
             "MA5": "up",
@@ -1610,10 +1630,11 @@
       },
       "signals": {
         "trend_period_bars": 0,
-        "buy_score": 5,
+        "buy_score": 8,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
         "buy_reasons": [
+          "+3点: 日足5MAを陽線突破 + トレンド周期0本（≤8本）",
           "+2点: 週足5MA右肩上がり",
           "+1点: 週足10MA右肩上がり or 横ばい",
           "+1点: 週足20MA右肩上がり or 横ばい",
@@ -1631,38 +1652,36 @@
         "avoid_flags": [
           "日足20MA下向き = 負けパターン1（マニュアル §8）"
         ],
-        "sell_state": "3次：売却シグナル",
-        "sell_reasons": [
-          "本日に5MA陰線下抜け、現在も5MA下（直近5日: 4日5MA下/陰線3本）（マニュアル §9 3次）"
-        ],
-        "surge_pct_last5bars": -4.8,
+        "sell_state": "ホールド",
+        "sell_reasons": [],
+        "surge_pct_last5bars": -0.27,
         "stop_loss_candidates": {
-          "現在値-5%": 2767.35,
+          "現在値-5%": 2805.35,
           "直近20日安値": 2754.0,
-          "日足20MA": 3168.9
+          "日足20MA": 3165.05
         },
-        "last_close": 2913.0,
+        "last_close": 2953.0,
         "diagnostics": {
-          "below_ma5_now": true,
-          "above_ma5_now": false,
-          "days_below_ma5_in_last_5": 4,
-          "bears_in_last_5": 3,
+          "below_ma5_now": false,
+          "above_ma5_now": true,
+          "days_below_ma5_in_last_5": 3,
+          "bears_in_last_5": 2,
           "ma5_bearish_breakdown_recent": true,
-          "breakdown_days_ago": 0
+          "breakdown_days_ago": 1
         }
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": -1.07,
-        "ma5_now": 2944.6,
-        "self_mean_positive_dev_pct": 3.23,
+        "current_dev_pct": 0.34,
+        "ma5_now": 2943.0,
+        "self_mean_positive_dev_pct": 3.22,
         "self_p80_dev_pct": 3.19,
         "self_p90_dev_pct": 5.9,
         "pullback_threshold_pct": 1.61,
-        "zone": "5MA下（押し目以前 or 下落）",
+        "zone": "押し目圏",
         "pullback_target_price": [
-          2944.6,
-          2974.05
+          2943.0,
+          2972.43
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -1684,16 +1703,16 @@
       },
       "earnings": {
         "next_earnings_date": "2026-08-06",
-        "days_until": 51,
+        "days_until": 50,
         "source": "calendar",
-        "advice": "あと51日。通常運用可"
+        "advice": "あと50日。通常運用可"
       },
       "fundamentals": {
-        "market_cap_oku": 5275,
-        "per_trailing": 13.57,
-        "per_forward": 5.22,
-        "pbr": 1.52,
-        "dividend_yield_pct": 1.91,
+        "market_cap_oku": 5347,
+        "per_trailing": 13.75,
+        "per_forward": 5.29,
+        "pbr": 1.54,
+        "dividend_yield_pct": 1.99,
         "roe_pct": 13.47,
         "operating_margin_pct": 7.31,
         "revenue_growth_pct": 30.6,
@@ -1702,42 +1721,42 @@
         "fundamental_score_max_theoretical": 8,
         "fundamental_score_min_theoretical": -5,
         "fundamental_reasons": [
-          "+1点: PER 5.2倍 = 割安",
+          "+1点: PER 5.3倍 = 割安",
           "+2点: EPS成長 +373% = 絶好調",
           "+1点: 売上成長 +30.6% = 好調",
-          "+1点: 時価総額 5275億 = §4 大型株要件クリア"
+          "+1点: 時価総額 5347億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [],
         "valuation_label": "割安寄り"
       },
-      "verdict": "🚨 売却シグナル（保有中なら売却検討）",
+      "verdict": "⛔ 買い見送り推奨（負けパターン該当）",
       "name": "UACJ",
       "note": "アルミ製品(EV/車載/缶)、業績絶好調(売上+30%/EPS+373%)、§4基準クリア(6,012億)、Forward PER 5.95倍と割安"
     },
     {
       "ticker": "6503",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:35",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:48",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 5872.0,
-          "candle": "陰線",
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 5895.0,
+          "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": -0.63,
-            "MA10": -1.029,
-            "MA20": -0.507,
-            "MA50": 0.169,
-            "MA100": 0.104
+            "MA5": 0.085,
+            "MA10": -0.66,
+            "MA20": -0.279,
+            "MA50": 0.222,
+            "MA100": 0.121
           },
           "ma_direction": {
-            "MA5": "down",
+            "MA5": "up",
             "MA10": "down",
             "MA20": "down",
             "MA50": "up",
@@ -1752,14 +1771,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 5872.0,
+          "last_close": 5895.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": -0.766,
-            "MA10": 0.87,
-            "MA20": 0.968,
-            "MA50": 1.306,
-            "MA100": 0.922
+            "MA5": -0.747,
+            "MA10": 0.879,
+            "MA20": 0.974,
+            "MA50": 1.308,
+            "MA100": 0.924
           },
           "ma_direction": {
             "MA5": "down",
@@ -1777,14 +1796,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 5872.0,
+          "last_close": 5895.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 5.945,
-            "MA10": 6.604,
-            "MA20": 5.272,
-            "MA50": 3.785,
-            "MA100": 2.065
+            "MA5": 5.969,
+            "MA10": 6.618,
+            "MA20": 5.281,
+            "MA50": 3.79,
+            "MA100": 2.068
           },
           "ma_direction": {
             "MA5": "up",
@@ -1801,11 +1820,12 @@
         }
       },
       "signals": {
-        "trend_period_bars": 2,
-        "buy_score": 3,
+        "trend_period_bars": 3,
+        "buy_score": 4,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
         "buy_reasons": [
+          "+1点: 日足5MA右肩上がり + 終値5MA上",
           "+1点: 週足10MA右肩上がり or 横ばい",
           "+1点: 週足20MA右肩上がり or 横ばい",
           "+1点: 月足5MA右肩上がり",
@@ -1824,34 +1844,34 @@
         ],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 0.91,
+        "surge_pct_last5bars": 5.8,
         "stop_loss_candidates": {
-          "現在値-5%": 5578.4,
+          "現在値-5%": 5600.25,
           "直近20日安値": 5225.0,
-          "日足20MA": 6037.55
+          "日足20MA": 6044.95
         },
-        "last_close": 5872.0,
+        "last_close": 5895.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 3,
-          "bears_in_last_5": 3,
+          "days_below_ma5_in_last_5": 2,
+          "bears_in_last_5": 2,
           "ma5_bearish_breakdown_recent": false,
           "breakdown_days_ago": null
         }
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 3.77,
-        "ma5_now": 5658.6,
-        "self_mean_positive_dev_pct": 2.49,
+        "current_dev_pct": 3.0,
+        "ma5_now": 5723.2,
+        "self_mean_positive_dev_pct": 2.5,
         "self_p80_dev_pct": 3.04,
         "self_p90_dev_pct": 4.11,
         "pullback_threshold_pct": 1.25,
-        "zone": "伸び気味（自己80%点超）",
+        "zone": "中間",
         "pullback_target_price": [
-          5658.6,
-          5715.19
+          5723.2,
+          5780.43
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -1877,10 +1897,10 @@
         "advice": "決算日不明（手動確認推奨）"
       },
       "fundamentals": {
-        "market_cap_oku": 120167,
-        "per_trailing": 29.57,
-        "per_forward": 35.56,
-        "pbr": 2.69,
+        "market_cap_oku": 120637,
+        "per_trailing": 29.7,
+        "per_forward": 35.7,
+        "pbr": 2.7,
         "dividend_yield_pct": 1.02,
         "roe_pct": 9.96,
         "operating_margin_pct": 7.96,
@@ -1891,10 +1911,10 @@
         "fundamental_score_min_theoretical": -5,
         "fundamental_reasons": [
           "EPS成長 不明",
-          "+1点: 時価総額 120167億 = §4 大型株要件クリア"
+          "+1点: 時価総額 120637億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [
-          "-1点: PER 35.6倍 = 割高"
+          "-1点: PER 35.7倍 = 割高"
         ],
         "valuation_label": "割高"
       },
@@ -1905,29 +1925,29 @@
     {
       "ticker": "6506",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:37",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:49",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 6845.0,
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 7025.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": -0.593,
-            "MA10": -0.831,
-            "MA20": -0.213,
-            "MA50": 0.775,
-            "MA100": 0.236
+            "MA5": 0.939,
+            "MA10": -0.473,
+            "MA20": 0.143,
+            "MA50": 0.866,
+            "MA100": 0.266
           },
           "ma_direction": {
-            "MA5": "down",
+            "MA5": "up",
             "MA10": "down",
-            "MA20": "down",
+            "MA20": "up",
             "MA50": "up",
             "MA100": "up"
           },
@@ -1940,14 +1960,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 6845.0,
+          "last_close": 7025.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 2.594,
-            "MA10": 4.297,
-            "MA20": 1.626,
-            "MA50": 1.684,
-            "MA100": 0.257
+            "MA5": 2.739,
+            "MA10": 4.38,
+            "MA20": 1.668,
+            "MA50": 1.705,
+            "MA100": 0.268
           },
           "ma_direction": {
             "MA5": "up",
@@ -1957,7 +1977,7 @@
             "MA100": "up"
           },
           "above_ma": {
-            "MA5": false,
+            "MA5": true,
             "MA10": true,
             "MA20": true
           }
@@ -1965,14 +1985,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 6845.0,
+          "last_close": 7025.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 6.006,
-            "MA10": 6.827,
-            "MA20": 1.234,
-            "MA50": 0.521,
-            "MA100": 0.168
+            "MA5": 6.197,
+            "MA10": 6.941,
+            "MA20": 1.289,
+            "MA50": 0.539,
+            "MA100": 0.178
           },
           "ma_direction": {
             "MA5": "up",
@@ -1989,11 +2009,202 @@
         }
       },
       "signals": {
-        "trend_period_bars": 2,
-        "buy_score": 5,
+        "trend_period_bars": 3,
+        "buy_score": 9,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
         "buy_reasons": [
+          "+1点: 日足5MA右肩上がり + 終値5MA上",
+          "+1点: 日足20MA右肩上がり",
+          "+2点: 週足5MA右肩上がり",
+          "+1点: 週足10MA右肩上がり or 横ばい",
+          "+1点: 週足20MA右肩上がり or 横ばい",
+          "+1点: 月足5MA右肩上がり",
+          "+1点: 月足10MA右肩上がり",
+          "+1点: 月足20MA右肩上がり"
+        ],
+        "penalty_reasons": [],
+        "hard_avoid_flags": [],
+        "soft_warning_flags": [
+          "直近5本で+17.3% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+        ],
+        "avoid_flags": [
+          "直近5本で+17.3% 急騰中 = ジリジリ上昇中の飛びつき注意・押し目待ち推奨（マニュアル §8 負けパターン2）"
+        ],
+        "sell_state": "ホールド",
+        "sell_reasons": [],
+        "surge_pct_last5bars": 17.32,
+        "stop_loss_candidates": {
+          "現在値-5%": 6673.75,
+          "直近20日安値": 5598.0,
+          "日足20MA": 6818.85
+        },
+        "last_close": 7025.0,
+        "diagnostics": {
+          "below_ma5_now": false,
+          "above_ma5_now": true,
+          "days_below_ma5_in_last_5": 1,
+          "bears_in_last_5": 0,
+          "ma5_bearish_breakdown_recent": false,
+          "breakdown_days_ago": null
+        }
+      },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 6.84,
+        "ma5_now": 6575.2,
+        "self_mean_positive_dev_pct": 3.52,
+        "self_p80_dev_pct": 3.6,
+        "self_p90_dev_pct": 6.03,
+        "pullback_threshold_pct": 1.76,
+        "zone": "伸びきり（自己90%点超）",
+        "pullback_target_price": [
+          6575.2,
+          6640.95
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
+      "volume_zones": {
+        "resistance_zones_above": [
+          7143.0
+        ],
+        "support_zones_below": [
+          4296.4,
+          5162.8,
+          5410.3,
+          5534.1,
+          6400.5,
+          6524.2,
+          6771.8,
+          6895.5
+        ],
+        "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
+      },
+      "earnings": {
+        "next_earnings_date": "2026-07-10",
+        "days_until": 23,
+        "source": "calendar",
+        "advice": "あと23日。通常運用可"
+      },
+      "fundamentals": {
+        "market_cap_oku": 18221,
+        "per_trailing": 51.83,
+        "per_forward": 34.29,
+        "pbr": 3.77,
+        "dividend_yield_pct": 1.05,
+        "roe_pct": 7.84,
+        "operating_margin_pct": 8.8,
+        "revenue_growth_pct": 2.0,
+        "eps_growth_pct": -15.7,
+        "fundamental_score": 0,
+        "fundamental_score_max_theoretical": 8,
+        "fundamental_score_min_theoretical": -5,
+        "fundamental_reasons": [
+          "+0点: PER 34.3倍 = やや高めだが許容範囲",
+          "+1点: 時価総額 18221億 = §4 大型株要件クリア"
+        ],
+        "fundamental_penalty_reasons": [
+          "-1点: EPS成長 -16% = 減益（マニュアル §4 削除要件相当）"
+        ],
+        "valuation_label": "やや割高"
+      },
+      "verdict": "🟢 買いサイン強い（急騰中→押し目待ち推奨 / 5MA伸びきり→押し目待ち）",
+      "name": "安川電機",
+      "note": "サーボモーター・産業ロボット"
+    },
+    {
+      "ticker": "9412",
+      "data_freshness": {
+        "fetched_at": "2026-06-17T01:59:50",
+        "last_daily_bar_date": "2026-06-17",
+        "days_old": 0,
+        "status": "本日深夜（前日確定値の可能性あり）",
+        "source": "yfinance (Yahoo Finance、15-20分遅延)"
+      },
+      "timeframes": {
+        "daily": {
+          "timeframe": "日足",
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 3370.0,
+          "candle": "陽線",
+          "ma_slope_pct_per_bar": {
+            "MA5": -0.364,
+            "MA10": -1.764,
+            "MA20": -0.984,
+            "MA50": 0.215,
+            "MA100": 0.364
+          },
+          "ma_direction": {
+            "MA5": "down",
+            "MA10": "down",
+            "MA20": "down",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": false
+          }
+        },
+        "weekly": {
+          "timeframe": "週足",
+          "last_bar_datetime": "2026-06-15T00:00:00+09:00",
+          "last_close": 3370.0,
+          "candle": "陰線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 0.396,
+            "MA10": 2.181,
+            "MA20": 2.625,
+            "MA50": 2.228,
+            "MA100": 1.834
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": false,
+            "MA10": false,
+            "MA20": true
+          }
+        },
+        "monthly": {
+          "timeframe": "月足",
+          "last_bar_datetime": "2026-06-01T00:00:00+09:00",
+          "last_close": 3370.0,
+          "candle": "陰線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 15.424,
+            "MA10": 12.343,
+            "MA20": 9.839,
+            "MA50": 6.853,
+            "MA100": 4.438
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": false,
+            "MA10": true,
+            "MA20": true
+          }
+        }
+      },
+      "signals": {
+        "trend_period_bars": 1,
+        "buy_score": 8,
+        "buy_score_max_theoretical": 14,
+        "buy_score_min_theoretical": -7,
+        "buy_reasons": [
+          "+3点: 日足5MAを陽線突破 + トレンド周期1本（≤8本）",
           "+2点: 週足5MA右肩上がり",
           "+1点: 週足10MA右肩上がり or 横ばい",
           "+1点: 週足20MA右肩上がり or 横ばい",
@@ -2013,232 +2224,39 @@
         ],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 7.04,
+        "surge_pct_last5bars": 6.48,
         "stop_loss_candidates": {
-          "現在値-5%": 6502.75,
-          "直近20日安値": 5598.0,
-          "日足20MA": 6771.4
+          "現在値-5%": 3201.5,
+          "直近20日安値": 3085.0,
+          "日足20MA": 3793.75
         },
-        "last_close": 6845.0,
+        "last_close": 3370.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 2,
-          "bears_in_last_5": 1,
-          "ma5_bearish_breakdown_recent": false,
-          "breakdown_days_ago": null
-        }
-      },
-      "ma5_deviation": {
-        "available": true,
-        "current_dev_pct": 7.49,
-        "ma5_now": 6367.8,
-        "self_mean_positive_dev_pct": 3.47,
-        "self_p80_dev_pct": 3.59,
-        "self_p90_dev_pct": 5.45,
-        "pullback_threshold_pct": 1.73,
-        "zone": "伸びきり（自己90%点超）",
-        "pullback_target_price": [
-          6367.8,
-          6431.48
-        ],
-        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
-      },
-      "volume_zones": {
-        "resistance_zones_above": [
-          6895.5,
-          7143.0
-        ],
-        "support_zones_below": [
-          4296.4,
-          5162.8,
-          5410.3,
-          5534.1,
-          6400.5,
-          6524.2,
-          6771.8
-        ],
-        "interpretation": "明確なゾーン無し → ボラ低 or トレンド初期"
-      },
-      "earnings": {
-        "next_earnings_date": "2026-07-10",
-        "days_until": 24,
-        "source": "calendar",
-        "advice": "あと24日。通常運用可"
-      },
-      "fundamentals": {
-        "market_cap_oku": 17754,
-        "per_trailing": 50.42,
-        "per_forward": 33.41,
-        "pbr": 3.67,
-        "dividend_yield_pct": 1.08,
-        "roe_pct": 7.84,
-        "operating_margin_pct": 8.8,
-        "revenue_growth_pct": 2.0,
-        "eps_growth_pct": -15.7,
-        "fundamental_score": 0,
-        "fundamental_score_max_theoretical": 8,
-        "fundamental_score_min_theoretical": -5,
-        "fundamental_reasons": [
-          "+0点: PER 33.4倍 = やや高めだが許容範囲",
-          "+1点: 時価総額 17754億 = §4 大型株要件クリア"
-        ],
-        "fundamental_penalty_reasons": [
-          "-1点: EPS成長 -16% = 減益（マニュアル §4 削除要件相当）"
-        ],
-        "valuation_label": "やや割高"
-      },
-      "verdict": "⛔ 買い見送り推奨（負けパターン該当）",
-      "name": "安川電機",
-      "note": "サーボモーター・産業ロボット"
-    },
-    {
-      "ticker": "9412",
-      "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:38",
-        "last_daily_bar_date": "2026-06-16",
-        "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
-        "source": "yfinance (Yahoo Finance、15-20分遅延)"
-      },
-      "timeframes": {
-        "daily": {
-          "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 3270.0,
-          "candle": "陰線",
-          "ma_slope_pct_per_bar": {
-            "MA5": -0.919,
-            "MA10": -2.334,
-            "MA20": -1.0,
-            "MA50": 0.187,
-            "MA100": 0.359
-          },
-          "ma_direction": {
-            "MA5": "down",
-            "MA10": "down",
-            "MA20": "down",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": false,
-            "MA10": false,
-            "MA20": false
-          }
-        },
-        "weekly": {
-          "timeframe": "週足",
-          "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 3270.0,
-          "candle": "陰線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 0.264,
-            "MA10": 2.108,
-            "MA20": 2.583,
-            "MA50": 2.204,
-            "MA100": 1.818
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": false,
-            "MA10": false,
-            "MA20": false
-          }
-        },
-        "monthly": {
-          "timeframe": "月足",
-          "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 3270.0,
-          "candle": "陰線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 15.187,
-            "MA10": 12.2,
-            "MA20": 9.746,
-            "MA50": 6.798,
-            "MA100": 4.402
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": false,
-            "MA10": true,
-            "MA20": true
-          }
-        }
-      },
-      "signals": {
-        "trend_period_bars": 0,
-        "buy_score": 5,
-        "buy_score_max_theoretical": 14,
-        "buy_score_min_theoretical": -7,
-        "buy_reasons": [
-          "+2点: 週足5MA右肩上がり",
-          "+1点: 週足10MA右肩上がり or 横ばい",
-          "+1点: 週足20MA右肩上がり or 横ばい",
-          "+1点: 月足5MA右肩上がり",
-          "+1点: 月足10MA右肩上がり",
-          "+1点: 月足20MA右肩上がり"
-        ],
-        "penalty_reasons": [
-          "-2点: 日足20MA下向き = 負けパターン"
-        ],
-        "hard_avoid_flags": [
-          "日足20MA下向き = 負けパターン1（マニュアル §8）"
-        ],
-        "soft_warning_flags": [],
-        "avoid_flags": [
-          "日足20MA下向き = 負けパターン1（マニュアル §8）"
-        ],
-        "sell_state": "3次：売却シグナル",
-        "sell_reasons": [
-          "1日前に5MA陰線下抜け、現在も5MA下（直近5日: 4日5MA下/陰線3本）（マニュアル §9 3次）"
-        ],
-        "surge_pct_last5bars": -0.46,
-        "stop_loss_candidates": {
-          "現在値-5%": 3106.5,
-          "直近20日安値": 3085.0,
-          "日足20MA": 3834.75
-        },
-        "last_close": 3270.0,
-        "diagnostics": {
-          "below_ma5_now": true,
-          "above_ma5_now": false,
-          "days_below_ma5_in_last_5": 4,
-          "bears_in_last_5": 3,
+          "days_below_ma5_in_last_5": 3,
+          "bears_in_last_5": 2,
           "ma5_bearish_breakdown_recent": true,
-          "breakdown_days_ago": 1
+          "breakdown_days_ago": 2
         }
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": -0.18,
-        "ma5_now": 3276.0,
-        "self_mean_positive_dev_pct": 3.1,
+        "current_dev_pct": 1.6,
+        "ma5_now": 3317.0,
+        "self_mean_positive_dev_pct": 3.08,
         "self_p80_dev_pct": 3.44,
         "self_p90_dev_pct": 5.75,
-        "pullback_threshold_pct": 1.55,
-        "zone": "5MA下（押し目以前 or 下落）",
+        "pullback_threshold_pct": 1.54,
+        "zone": "中間",
         "pullback_target_price": [
-          3276.0,
-          3308.76
+          3317.0,
+          3350.17
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
       "volume_zones": {
         "resistance_zones_above": [
-          3336.9,
           3404.4,
           3539.3,
           3741.7,
@@ -2248,7 +2266,8 @@
         "support_zones_below": [
           3067.1,
           3134.5,
-          3269.5
+          3269.5,
+          3336.9
         ],
         "interpretation": "上下ともゾーンあり → レンジ展開想定"
       },
@@ -2258,11 +2277,11 @@
         "advice": "決算日不明（手動確認推奨）"
       },
       "fundamentals": {
-        "market_cap_oku": 9268,
-        "per_trailing": 39.82,
-        "per_forward": 46.81,
-        "pbr": 3.05,
-        "dividend_yield_pct": 1.49,
+        "market_cap_oku": 9552,
+        "per_trailing": 40.9,
+        "per_forward": 48.25,
+        "pbr": 3.15,
+        "dividend_yield_pct": 1.47,
         "roe_pct": 8.0,
         "operating_margin_pct": 25.55,
         "revenue_growth_pct": 7.5,
@@ -2273,38 +2292,38 @@
         "fundamental_reasons": [
           "+1点: EPS成長 +21% = 好調",
           "+1点: 営業利益率 25.6% = 高採算",
-          "+1点: 時価総額 9268億 = §4 大型株要件クリア"
+          "+1点: 時価総額 9552億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [
-          "-1点: PER 46.8倍 = 割高"
+          "-1点: PER 48.2倍 = 割高"
         ],
         "valuation_label": "割高"
       },
-      "verdict": "🚨 売却シグナル（保有中なら売却検討）",
+      "verdict": "⛔ 買い見送り推奨（負けパターン該当）",
       "name": "スカパーJSAT",
       "note": "衛星通信・防衛宇宙テーマ"
     },
     {
       "ticker": "8306",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:39",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:51",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 3228.0,
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 3298.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 0.058,
-            "MA10": 0.581,
+            "MA5": 0.283,
+            "MA10": 0.58,
             "MA20": 0.352,
-            "MA50": 0.348,
-            "MA100": 0.101
+            "MA50": 0.366,
+            "MA100": 0.1
           },
           "ma_direction": {
             "MA5": "up",
@@ -2322,14 +2341,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 3228.0,
-          "candle": "陰線",
+          "last_close": 3298.0,
+          "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 2.293,
-            "MA10": 1.419,
-            "MA20": 0.588,
-            "MA50": 0.945,
-            "MA100": 0.651
+            "MA5": 2.415,
+            "MA10": 1.481,
+            "MA20": 0.619,
+            "MA50": 0.959,
+            "MA100": 0.659
           },
           "ma_direction": {
             "MA5": "up",
@@ -2347,14 +2366,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 3228.0,
+          "last_close": 3298.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 3.059,
-            "MA10": 3.432,
-            "MA20": 3.184,
-            "MA50": 3.001,
-            "MA100": 2.077
+            "MA5": 3.193,
+            "MA10": 3.505,
+            "MA20": 3.226,
+            "MA50": 3.025,
+            "MA100": 2.095
           },
           "ma_direction": {
             "MA5": "up",
@@ -2371,12 +2390,11 @@
         }
       },
       "signals": {
-        "trend_period_bars": 2,
-        "buy_score": 11,
+        "trend_period_bars": 3,
+        "buy_score": 9,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
         "buy_reasons": [
-          "+2点: 5MAに近接 + トレンド周期2本（押し目候補・終値5MA上）",
           "+1点: 日足5MA右肩上がり + 終値5MA上",
           "+1点: 日足20MA右肩上がり",
           "+2点: 週足5MA右肩上がり",
@@ -2392,34 +2410,34 @@
         "avoid_flags": [],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 1.51,
+        "surge_pct_last5bars": 3.61,
         "stop_loss_candidates": {
-          "現在値-5%": 3066.6,
+          "現在値-5%": 3133.1,
           "直近20日安値": 2964.0,
-          "日足20MA": 3111.25
+          "日足20MA": 3124.65
         },
-        "last_close": 3228.0,
+        "last_close": 3298.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 3,
-          "bears_in_last_5": 1,
-          "ma5_bearish_breakdown_recent": true,
-          "breakdown_days_ago": 4
+          "days_below_ma5_in_last_5": 2,
+          "bears_in_last_5": 0,
+          "ma5_bearish_breakdown_recent": false,
+          "breakdown_days_ago": null
         }
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 1.15,
-        "ma5_now": 3191.2,
-        "self_mean_positive_dev_pct": 1.83,
-        "self_p80_dev_pct": 1.98,
+        "current_dev_pct": 2.61,
+        "ma5_now": 3214.2,
+        "self_mean_positive_dev_pct": 1.84,
+        "self_p80_dev_pct": 2.0,
         "self_p90_dev_pct": 3.08,
         "pullback_threshold_pct": 1.0,
-        "zone": "中間",
+        "zone": "伸び気味（自己80%点超）",
         "pullback_target_price": [
-          3191.2,
-          3223.11
+          3214.2,
+          3246.34
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -2440,16 +2458,16 @@
       },
       "earnings": {
         "next_earnings_date": "2026-08-04",
-        "days_until": 49,
+        "days_until": 48,
         "source": "calendar",
-        "advice": "あと49日。通常運用可"
+        "advice": "あと48日。通常運用可"
       },
       "fundamentals": {
-        "market_cap_oku": 364017,
-        "per_trailing": 15.2,
-        "per_forward": 21.28,
-        "pbr": 1.64,
-        "dividend_yield_pct": 2.96,
+        "market_cap_oku": 371911,
+        "per_trailing": 15.53,
+        "per_forward": 21.74,
+        "pbr": 1.67,
+        "dividend_yield_pct": 2.97,
         "roe_pct": 11.91,
         "operating_margin_pct": 39.53,
         "revenue_growth_pct": null,
@@ -2458,39 +2476,39 @@
         "fundamental_score_max_theoretical": 8,
         "fundamental_score_min_theoretical": -5,
         "fundamental_reasons": [
-          "+1点: PER 21.3倍 = 適正範囲（マニュアル想定）",
+          "+1点: PER 21.7倍 = 適正範囲（マニュアル想定）",
           "EPS成長 不明",
           "+1点: 営業利益率 39.5% = 高採算",
-          "+1点: 時価総額 364017億 = §4 大型株要件クリア"
+          "+1点: 時価総額 371911億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [],
         "valuation_label": "適正"
       },
-      "verdict": "🟢 買いサイン強い",
+      "verdict": "🟢 買いサイン強い（5MA伸び気味→押し目待ち）",
       "name": "三菱UFJフィナンシャルG",
       "note": "メガ・利上げ本命、時価36兆超、6/5上場来高値・6日続伸（高値圏注意）"
     },
     {
       "ticker": "7186",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:40",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:52",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 1732.5,
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 1768.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 0.745,
-            "MA10": 0.742,
-            "MA20": 0.343,
-            "MA50": 0.381,
-            "MA100": 0.205
+            "MA5": 0.891,
+            "MA10": 0.869,
+            "MA20": 0.369,
+            "MA50": 0.41,
+            "MA100": 0.215
           },
           "ma_direction": {
             "MA5": "up",
@@ -2508,14 +2526,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 1732.5,
+          "last_close": 1768.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 2.379,
-            "MA10": 1.466,
-            "MA20": 0.936,
-            "MA50": 1.171,
-            "MA100": 0.693
+            "MA5": 2.494,
+            "MA10": 1.525,
+            "MA20": 0.966,
+            "MA50": 1.185,
+            "MA100": 0.701
           },
           "ma_direction": {
             "MA5": "up",
@@ -2533,14 +2551,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 1732.5,
+          "last_close": 1768.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 4.308,
-            "MA10": 4.659,
-            "MA20": 3.479,
-            "MA50": 2.821,
-            "MA100": 1.49
+            "MA5": 4.44,
+            "MA10": 4.734,
+            "MA20": 3.522,
+            "MA50": 2.844,
+            "MA100": 1.504
           },
           "ma_direction": {
             "MA5": "up",
@@ -2557,8 +2575,8 @@
         }
       },
       "signals": {
-        "trend_period_bars": 10,
-        "buy_score": 6,
+        "trend_period_bars": 11,
+        "buy_score": 9,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
         "buy_reasons": [
@@ -2571,48 +2589,42 @@
           "+1点: 月足10MA右肩上がり",
           "+1点: 月足20MA右肩上がり"
         ],
-        "penalty_reasons": [
-          "-3点: トレンド周期10本（≥10本）で5MA近接 = 伸び切り懸念"
-        ],
-        "hard_avoid_flags": [
-          "トレンド周期10本（≥10本）で5MA近接 = 伸び切り懸念"
-        ],
+        "penalty_reasons": [],
+        "hard_avoid_flags": [],
         "soft_warning_flags": [],
-        "avoid_flags": [
-          "トレンド周期10本（≥10本）で5MA近接 = 伸び切り懸念"
-        ],
+        "avoid_flags": [],
         "sell_state": "1次：利確検討",
         "sell_reasons": [
-          "トレンド周期10本（≥10本）"
+          "トレンド周期11本（≥10本）"
         ],
-        "surge_pct_last5bars": 1.7,
+        "surge_pct_last5bars": 4.52,
         "stop_loss_candidates": {
-          "現在値-5%": 1645.88,
+          "現在値-5%": 1679.6,
           "直近20日安値": 1539.0,
-          "日足20MA": 1657.15
+          "日足20MA": 1662.9
         },
-        "last_close": 1732.5,
+        "last_close": 1768.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
           "days_below_ma5_in_last_5": 1,
           "bears_in_last_5": 4,
           "ma5_bearish_breakdown_recent": true,
-          "breakdown_days_ago": 3
+          "breakdown_days_ago": 4
         }
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 1.06,
-        "ma5_now": 1714.3,
-        "self_mean_positive_dev_pct": 2.11,
+        "current_dev_pct": 2.22,
+        "ma5_now": 1729.6,
+        "self_mean_positive_dev_pct": 2.13,
         "self_p80_dev_pct": 2.37,
         "self_p90_dev_pct": 3.52,
-        "pullback_threshold_pct": 1.05,
+        "pullback_threshold_pct": 1.06,
         "zone": "中間",
         "pullback_target_price": [
-          1714.3,
-          1731.44
+          1729.6,
+          1746.9
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -2633,16 +2645,16 @@
       },
       "earnings": {
         "next_earnings_date": "2026-08-05",
-        "days_until": 50,
+        "days_until": 49,
         "source": "calendar",
-        "advice": "あと50日。通常運用可"
+        "advice": "あと49日。通常運用可"
       },
       "fundamentals": {
-        "market_cap_oku": 19256,
-        "per_trailing": 18.42,
-        "per_forward": 23.39,
-        "pbr": 1.37,
-        "dividend_yield_pct": 2.73,
+        "market_cap_oku": 19651,
+        "per_trailing": 18.79,
+        "per_forward": 23.87,
+        "pbr": 1.4,
+        "dividend_yield_pct": 2.77,
         "roe_pct": 7.96,
         "operating_margin_pct": 31.56,
         "revenue_growth_pct": 21.2,
@@ -2651,40 +2663,40 @@
         "fundamental_score_max_theoretical": 8,
         "fundamental_score_min_theoretical": -5,
         "fundamental_reasons": [
-          "+1点: PER 23.4倍 = 適正範囲（マニュアル想定）",
+          "+1点: PER 23.9倍 = 適正範囲（マニュアル想定）",
           "+0点: EPS成長 +10% = 維持",
           "+1点: 売上成長 +21.2% = 好調",
           "+1点: 営業利益率 31.6% = 高採算",
-          "+1点: 時価総額 19256億 = §4 大型株要件クリア"
+          "+1点: 時価総額 19651億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [],
         "valuation_label": "適正"
       },
-      "verdict": "⛔ 買い見送り推奨（負けパターン該当）",
+      "verdict": "🟢 買いサイン強い（ファンダ◎(F:4)）",
       "name": "横浜フィナンシャルG",
       "note": "地銀・日銀利上げ/再編、時価1.83兆、純利益1,065億 +28.6%、画像目視で形状ベスト（MA収束の押し目明け）"
     },
     {
       "ticker": "8331",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:41",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:52",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 2455.5,
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 2501.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 0.464,
-            "MA10": 0.657,
-            "MA20": 0.348,
-            "MA50": 0.342,
-            "MA100": 0.201
+            "MA5": 0.612,
+            "MA10": 0.722,
+            "MA20": 0.351,
+            "MA50": 0.361,
+            "MA100": 0.199
           },
           "ma_direction": {
             "MA5": "up",
@@ -2702,14 +2714,14 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 2455.5,
+          "last_close": 2501.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 2.217,
-            "MA10": 1.337,
-            "MA20": 0.869,
-            "MA50": 1.222,
-            "MA100": 0.661
+            "MA5": 2.32,
+            "MA10": 1.389,
+            "MA20": 0.895,
+            "MA50": 1.235,
+            "MA100": 0.669
           },
           "ma_direction": {
             "MA5": "up",
@@ -2727,14 +2739,14 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 2455.5,
+          "last_close": 2501.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 5.289,
-            "MA10": 5.1,
-            "MA20": 3.437,
-            "MA50": 2.586,
-            "MA100": 1.462
+            "MA5": 5.411,
+            "MA10": 5.169,
+            "MA20": 3.476,
+            "MA50": 2.606,
+            "MA100": 1.474
           },
           "ma_direction": {
             "MA5": "up",
@@ -2751,194 +2763,7 @@
         }
       },
       "signals": {
-        "trend_period_bars": 3,
-        "buy_score": 11,
-        "buy_score_max_theoretical": 14,
-        "buy_score_min_theoretical": -7,
-        "buy_reasons": [
-          "+2点: 5MAに近接 + トレンド周期3本（押し目候補・終値5MA上）",
-          "+1点: 日足5MA右肩上がり + 終値5MA上",
-          "+1点: 日足20MA右肩上がり",
-          "+2点: 週足5MA右肩上がり",
-          "+1点: 週足10MA右肩上がり or 横ばい",
-          "+1点: 週足20MA右肩上がり or 横ばい",
-          "+1点: 月足5MA右肩上がり",
-          "+1点: 月足10MA右肩上がり",
-          "+1点: 月足20MA右肩上がり"
-        ],
-        "penalty_reasons": [],
-        "hard_avoid_flags": [],
-        "soft_warning_flags": [],
-        "avoid_flags": [],
-        "sell_state": "ホールド",
-        "sell_reasons": [],
-        "surge_pct_last5bars": 0.68,
-        "stop_loss_candidates": {
-          "現在値-5%": 2332.72,
-          "直近20日安値": 2194.5,
-          "日足20MA": 2370.5
-        },
-        "last_close": 2455.5,
-        "diagnostics": {
-          "below_ma5_now": false,
-          "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 1,
-          "bears_in_last_5": 4,
-          "ma5_bearish_breakdown_recent": true,
-          "breakdown_days_ago": 3
-        }
-      },
-      "ma5_deviation": {
-        "available": true,
-        "current_dev_pct": 0.47,
-        "ma5_now": 2443.9,
-        "self_mean_positive_dev_pct": 2.15,
-        "self_p80_dev_pct": 2.45,
-        "self_p90_dev_pct": 3.78,
-        "pullback_threshold_pct": 1.07,
-        "zone": "押し目圏",
-        "pullback_target_price": [
-          2443.9,
-          2468.34
-        ],
-        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
-      },
-      "volume_zones": {
-        "resistance_zones_above": [],
-        "support_zones_below": [
-          2011.2,
-          2056.8,
-          2148.1,
-          2193.7,
-          2216.5,
-          2262.2,
-          2307.8,
-          2353.4,
-          2376.2
-        ],
-        "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
-      },
-      "earnings": {
-        "next_earnings_date": "2026-08-03",
-        "days_until": 48,
-        "source": "calendar",
-        "advice": "あと48日。通常運用可"
-      },
-      "fundamentals": {
-        "market_cap_oku": 17009,
-        "per_trailing": 18.34,
-        "per_forward": 22.25,
-        "pbr": 1.36,
-        "dividend_yield_pct": 2.54,
-        "roe_pct": 7.83,
-        "operating_margin_pct": 44.3,
-        "revenue_growth_pct": 18.0,
-        "eps_growth_pct": 29.8,
-        "fundamental_score": 5,
-        "fundamental_score_max_theoretical": 8,
-        "fundamental_score_min_theoretical": -5,
-        "fundamental_reasons": [
-          "+1点: PER 22.3倍 = 適正範囲（マニュアル想定）",
-          "+1点: EPS成長 +30% = 好調",
-          "+1点: 売上成長 +18.0% = 好調",
-          "+1点: 営業利益率 44.3% = 高採算",
-          "+1点: 時価総額 17009億 = §4 大型株要件クリア"
-        ],
-        "fundamental_penalty_reasons": [],
-        "valuation_label": "適正"
-      },
-      "verdict": "🟢 買いサイン強い（ファンダ◎(F:5)）",
-      "name": "千葉銀行",
-      "note": "地銀盟主・規模最大、時価1.65兆、純利益940億 +26.6%、配当52円増配"
-    },
-    {
-      "ticker": "5831",
-      "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:42",
-        "last_daily_bar_date": "2026-06-16",
-        "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
-        "source": "yfinance (Yahoo Finance、15-20分遅延)"
-      },
-      "timeframes": {
-        "daily": {
-          "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 3069.0,
-          "candle": "陰線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 0.987,
-            "MA10": 0.544,
-            "MA20": 0.203,
-            "MA50": 0.246,
-            "MA100": 0.147
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        },
-        "weekly": {
-          "timeframe": "週足",
-          "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 3069.0,
-          "candle": "陰線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 1.372,
-            "MA10": 0.794,
-            "MA20": 0.723,
-            "MA50": 1.105,
-            "MA100": 0.776
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        },
-        "monthly": {
-          "timeframe": "月足",
-          "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 3069.0,
-          "candle": "陽線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 3.954,
-            "MA10": 4.771,
-            "MA20": 4.189,
-            "MA50": 0.0,
-            "MA100": 0.0
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "flat",
-            "MA100": "flat"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        }
-      },
-      "signals": {
-        "trend_period_bars": 8,
+        "trend_period_bars": 4,
         "buy_score": 9,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
@@ -2958,204 +2783,17 @@
         "avoid_flags": [],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 5.94,
+        "surge_pct_last5bars": 2.77,
         "stop_loss_candidates": {
-          "現在値-5%": 2915.55,
-          "直近20日安値": 2720.5,
-          "日足20MA": 2933.53
+          "現在値-5%": 2375.95,
+          "直近20日安値": 2194.5,
+          "日足20MA": 2377.6
         },
-        "last_close": 3069.0,
+        "last_close": 2501.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 0,
-          "bears_in_last_5": 3,
-          "ma5_bearish_breakdown_recent": false,
-          "breakdown_days_ago": null
-        }
-      },
-      "ma5_deviation": {
-        "available": true,
-        "current_dev_pct": 1.87,
-        "ma5_now": 3012.6,
-        "self_mean_positive_dev_pct": 1.95,
-        "self_p80_dev_pct": 2.11,
-        "self_p90_dev_pct": 3.22,
-        "pullback_threshold_pct": 1.0,
-        "zone": "中間",
-        "pullback_target_price": [
-          3012.6,
-          3042.73
-        ],
-        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
-      },
-      "volume_zones": {
-        "resistance_zones_above": [],
-        "support_zones_below": [
-          2592.0,
-          2635.0,
-          2742.7,
-          2764.2,
-          2828.8,
-          2850.4,
-          2871.9,
-          2915.0,
-          2979.6
-        ],
-        "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
-      },
-      "earnings": {
-        "next_earnings_date": "2026-08-06",
-        "days_until": 51,
-        "source": "calendar",
-        "advice": "あと51日。通常運用可"
-      },
-      "fundamentals": {
-        "market_cap_oku": 16283,
-        "per_trailing": 18.31,
-        "per_forward": 24.54,
-        "pbr": 1.32,
-        "dividend_yield_pct": 3.14,
-        "roe_pct": 7.54,
-        "operating_margin_pct": 30.65,
-        "revenue_growth_pct": 30.9,
-        "eps_growth_pct": -4.4,
-        "fundamental_score": 3,
-        "fundamental_score_max_theoretical": 8,
-        "fundamental_score_min_theoretical": -5,
-        "fundamental_reasons": [
-          "+1点: PER 24.5倍 = 適正範囲（マニュアル想定）",
-          "+1点: 売上成長 +30.9% = 好調",
-          "+1点: 営業利益率 30.6% = 高採算",
-          "+1点: 時価総額 16283億 = §4 大型株要件クリア"
-        ],
-        "fundamental_penalty_reasons": [
-          "-1点: EPS成長 -4% = 減益（マニュアル §4 削除要件相当）"
-        ],
-        "valuation_label": "適正"
-      },
-      "verdict": "🟢 買いサイン強い",
-      "name": "しずおかフィナンシャルG",
-      "note": "地銀・名古屋銀統合思惑（2028目途）、時価1.54兆、純利益904億 +21.2%"
-    },
-    {
-      "ticker": "5844",
-      "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:43",
-        "last_daily_bar_date": "2026-06-16",
-        "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
-        "source": "yfinance (Yahoo Finance、15-20分遅延)"
-      },
-      "timeframes": {
-        "daily": {
-          "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 4656.0,
-          "candle": "陽線",
-          "ma_slope_pct_per_bar": {
-            "MA5": -0.338,
-            "MA10": 0.283,
-            "MA20": 0.13,
-            "MA50": 0.106,
-            "MA100": 0.218
-          },
-          "ma_direction": {
-            "MA5": "down",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        },
-        "weekly": {
-          "timeframe": "週足",
-          "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 4656.0,
-          "candle": "陽線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 0.778,
-            "MA10": 0.353,
-            "MA20": 1.047,
-            "MA50": 1.145,
-            "MA100": 0.582
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        },
-        "monthly": {
-          "timeframe": "月足",
-          "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 4656.0,
-          "candle": "陽線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 5.403,
-            "MA10": 5.415,
-            "MA20": 3.581,
-            "MA50": 2.745,
-            "MA100": 1.674
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        }
-      },
-      "signals": {
-        "trend_period_bars": 0,
-        "buy_score": 11,
-        "buy_score_max_theoretical": 14,
-        "buy_score_min_theoretical": -7,
-        "buy_reasons": [
-          "+3点: 日足5MAを陽線突破 + トレンド周期0本（≤8本）",
-          "+1点: 日足20MA右肩上がり",
-          "+2点: 週足5MA右肩上がり",
-          "+1点: 週足10MA右肩上がり or 横ばい",
-          "+1点: 週足20MA右肩上がり or 横ばい",
-          "+1点: 月足5MA右肩上がり",
-          "+1点: 月足10MA右肩上がり",
-          "+1点: 月足20MA右肩上がり"
-        ],
-        "penalty_reasons": [],
-        "hard_avoid_flags": [],
-        "soft_warning_flags": [],
-        "avoid_flags": [],
-        "sell_state": "ホールド",
-        "sell_reasons": [],
-        "surge_pct_last5bars": -0.72,
-        "stop_loss_candidates": {
-          "現在値-5%": 4423.2,
-          "直近20日安値": 4193.0,
-          "日足20MA": 4489.45
-        },
-        "last_close": 4656.0,
-        "diagnostics": {
-          "below_ma5_now": false,
-          "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 4,
+          "days_below_ma5_in_last_5": 1,
           "bears_in_last_5": 4,
           "ma5_bearish_breakdown_recent": true,
           "breakdown_days_ago": 4
@@ -3163,278 +2801,93 @@
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 3.22,
-        "ma5_now": 4510.8,
-        "self_mean_positive_dev_pct": 1.74,
-        "self_p80_dev_pct": 2.0,
-        "self_p90_dev_pct": 2.82,
-        "pullback_threshold_pct": 1.0,
-        "zone": "伸びきり（自己90%点超）",
+        "current_dev_pct": 1.77,
+        "ma5_now": 2457.4,
+        "self_mean_positive_dev_pct": 2.16,
+        "self_p80_dev_pct": 2.45,
+        "self_p90_dev_pct": 3.78,
+        "pullback_threshold_pct": 1.08,
+        "zone": "中間",
         "pullback_target_price": [
-          4510.8,
-          4555.91
+          2457.4,
+          2481.97
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
       "volume_zones": {
         "resistance_zones_above": [],
         "support_zones_below": [
-          4303.9,
-          4327.0,
-          4350.2,
-          4373.3,
-          4396.4,
-          4419.6,
-          4442.7,
-          4489.0,
-          4558.4
+          2011.2,
+          2148.1,
+          2193.7,
+          2216.5,
+          2262.2,
+          2307.8,
+          2330.6,
+          2353.4,
+          2376.2
         ],
         "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
       },
       "earnings": {
-        "next_earnings_date": "2026-07-30",
-        "days_until": 44,
+        "next_earnings_date": "2026-08-03",
+        "days_until": 47,
         "source": "calendar",
-        "advice": "あと44日。通常運用可"
+        "advice": "あと47日。通常運用可"
       },
       "fundamentals": {
-        "market_cap_oku": 13163,
-        "per_trailing": 13.74,
-        "per_forward": 33.47,
-        "pbr": 1.16,
-        "dividend_yield_pct": 2.44,
-        "roe_pct": 8.72,
-        "operating_margin_pct": 42.22,
-        "revenue_growth_pct": 563.2,
-        "eps_growth_pct": 1335.0,
+        "market_cap_oku": 17324,
+        "per_trailing": 18.69,
+        "per_forward": 22.67,
+        "pbr": 1.39,
+        "dividend_yield_pct": 2.61,
+        "roe_pct": 7.83,
+        "operating_margin_pct": 44.3,
+        "revenue_growth_pct": 18.0,
+        "eps_growth_pct": 29.8,
         "fundamental_score": 5,
         "fundamental_score_max_theoretical": 8,
         "fundamental_score_min_theoretical": -5,
         "fundamental_reasons": [
-          "+0点: PER 33.5倍 = やや高めだが許容範囲",
-          "+2点: EPS成長 +1335% = 絶好調",
-          "+1点: 売上成長 +563.2% = 好調",
-          "+1点: 営業利益率 42.2% = 高採算",
-          "+1点: 時価総額 13163億 = §4 大型株要件クリア"
-        ],
-        "fundamental_penalty_reasons": [],
-        "valuation_label": "やや割高"
-      },
-      "verdict": "🟢 買いサイン強い（5MA伸びきり→押し目待ち / ファンダ◎(F:5)）",
-      "name": "京都フィナンシャルG",
-      "note": "含み益・株主還元、時価1.31兆、純利益450億 +23.1%、任天堂・村田等の含み益、政策保有株縮減"
-    },
-    {
-      "ticker": "8354",
-      "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:44",
-        "last_daily_bar_date": "2026-06-16",
-        "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
-        "source": "yfinance (Yahoo Finance、15-20分遅延)"
-      },
-      "timeframes": {
-        "daily": {
-          "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 6861.0,
-          "candle": "陰線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 0.117,
-            "MA10": 0.599,
-            "MA20": 0.21,
-            "MA50": 0.211,
-            "MA100": 0.2
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        },
-        "weekly": {
-          "timeframe": "週足",
-          "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 6861.0,
-          "candle": "陰線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 1.239,
-            "MA10": 0.71,
-            "MA20": 0.96,
-            "MA50": 1.1,
-            "MA100": 0.547
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        },
-        "monthly": {
-          "timeframe": "月足",
-          "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 6861.0,
-          "candle": "陽線",
-          "ma_slope_pct_per_bar": {
-            "MA5": 5.37,
-            "MA10": 4.869,
-            "MA20": 2.996,
-            "MA50": 2.297,
-            "MA100": 1.187
-          },
-          "ma_direction": {
-            "MA5": "up",
-            "MA10": "up",
-            "MA20": "up",
-            "MA50": "up",
-            "MA100": "up"
-          },
-          "above_ma": {
-            "MA5": true,
-            "MA10": true,
-            "MA20": true
-          }
-        }
-      },
-      "signals": {
-        "trend_period_bars": 0,
-        "buy_score": 11,
-        "buy_score_max_theoretical": 14,
-        "buy_score_min_theoretical": -7,
-        "buy_reasons": [
-          "+2点: 5MAに近接 + トレンド周期0本（押し目候補・終値5MA上）",
-          "+1点: 日足5MA右肩上がり + 終値5MA上",
-          "+1点: 日足20MA右肩上がり",
-          "+2点: 週足5MA右肩上がり",
-          "+1点: 週足10MA右肩上がり or 横ばい",
-          "+1点: 週足20MA右肩上がり or 横ばい",
-          "+1点: 月足5MA右肩上がり",
-          "+1点: 月足10MA右肩上がり",
-          "+1点: 月足20MA右肩上がり"
-        ],
-        "penalty_reasons": [],
-        "hard_avoid_flags": [],
-        "soft_warning_flags": [],
-        "avoid_flags": [],
-        "sell_state": "ホールド",
-        "sell_reasons": [],
-        "surge_pct_last5bars": -0.94,
-        "stop_loss_candidates": {
-          "現在値-5%": 6517.95,
-          "直近20日安値": 6154.0,
-          "日足20MA": 6683.55
-        },
-        "last_close": 6861.0,
-        "diagnostics": {
-          "below_ma5_now": false,
-          "above_ma5_now": true,
-          "days_below_ma5_in_last_5": 1,
-          "bears_in_last_5": 4,
-          "ma5_bearish_breakdown_recent": true,
-          "breakdown_days_ago": 3
-        }
-      },
-      "ma5_deviation": {
-        "available": true,
-        "current_dev_pct": 0.22,
-        "ma5_now": 6846.2,
-        "self_mean_positive_dev_pct": 2.14,
-        "self_p80_dev_pct": 2.12,
-        "self_p90_dev_pct": 3.53,
-        "pullback_threshold_pct": 1.07,
-        "zone": "押し目圏",
-        "pullback_target_price": [
-          6846.2,
-          6914.66
-        ],
-        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
-      },
-      "volume_zones": {
-        "resistance_zones_above": [],
-        "support_zones_below": [
-          6228.6,
-          6358.9,
-          6445.8,
-          6532.6,
-          6576.1,
-          6619.5,
-          6663.0,
-          6706.4,
-          6836.7
-        ],
-        "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
-      },
-      "earnings": {
-        "next_earnings_date": "2026-08-06",
-        "days_until": 51,
-        "source": "calendar",
-        "advice": "あと51日。通常運用可"
-      },
-      "fundamentals": {
-        "market_cap_oku": 12965,
-        "per_trailing": 15.18,
-        "per_forward": 16.87,
-        "pbr": 1.2,
-        "dividend_yield_pct": 3.02,
-        "roe_pct": 8.52,
-        "operating_margin_pct": 11.85,
-        "revenue_growth_pct": null,
-        "eps_growth_pct": null,
-        "fundamental_score": 2,
-        "fundamental_score_max_theoretical": 8,
-        "fundamental_score_min_theoretical": -5,
-        "fundamental_reasons": [
-          "+1点: PER 16.9倍 = 適正範囲（マニュアル想定）",
-          "EPS成長 不明",
-          "+1点: 時価総額 12965億 = §4 大型株要件クリア"
+          "+1点: PER 22.7倍 = 適正範囲（マニュアル想定）",
+          "+1点: EPS成長 +30% = 好調",
+          "+1点: 売上成長 +18.0% = 好調",
+          "+1点: 営業利益率 44.3% = 高採算",
+          "+1点: 時価総額 17324億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [],
         "valuation_label": "適正"
       },
-      "verdict": "🟢 買いサイン強い",
-      "name": "ふくおかフィナンシャルG",
-      "note": "地銀・割安高配当、時価1.28兆、純利益854億 +18.4%、PER12.7倍最割安、年間210円配当"
+      "verdict": "🟢 買いサイン強い（ファンダ◎(F:5)）",
+      "name": "千葉銀行",
+      "note": "地銀盟主・規模最大、時価1.65兆、純利益940億 +26.6%、配当52円増配"
     },
     {
-      "ticker": "5830",
+      "ticker": "5831",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:45",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:53",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 3099.0,
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 3092.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 0.195,
-            "MA10": 0.086,
-            "MA20": -0.173,
-            "MA50": 0.093,
-            "MA100": 0.093
+            "MA5": 0.995,
+            "MA10": 0.789,
+            "MA20": 0.252,
+            "MA50": 0.256,
+            "MA100": 0.155
           },
           "ma_direction": {
             "MA5": "up",
             "MA10": "up",
-            "MA20": "down",
+            "MA20": "up",
             "MA50": "up",
             "MA100": "up"
           },
@@ -3447,13 +2900,13 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 3099.0,
+          "last_close": 3092.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": 0.22,
-            "MA10": 0.105,
-            "MA20": 0.407,
-            "MA50": 1.225,
+            "MA5": 1.413,
+            "MA10": 0.814,
+            "MA20": 0.733,
+            "MA50": 1.11,
             "MA100": 0.779
           },
           "ma_direction": {
@@ -3466,18 +2919,18 @@
           "above_ma": {
             "MA5": true,
             "MA10": true,
-            "MA20": false
+            "MA20": true
           }
         },
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 3099.0,
+          "last_close": 3092.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 2.91,
-            "MA10": 5.456,
-            "MA20": 4.093,
+            "MA5": 4.0,
+            "MA10": 4.798,
+            "MA20": 4.205,
             "MA50": 0.0,
             "MA100": 0.0
           },
@@ -3496,12 +2949,567 @@
         }
       },
       "signals": {
-        "trend_period_bars": 2,
+        "trend_period_bars": 9,
+        "buy_score": 9,
+        "buy_score_max_theoretical": 14,
+        "buy_score_min_theoretical": -7,
+        "buy_reasons": [
+          "+1点: 日足5MA右肩上がり + 終値5MA上",
+          "+1点: 日足20MA右肩上がり",
+          "+2点: 週足5MA右肩上がり",
+          "+1点: 週足10MA右肩上がり or 横ばい",
+          "+1点: 週足20MA右肩上がり or 横ばい",
+          "+1点: 月足5MA右肩上がり",
+          "+1点: 月足10MA右肩上がり",
+          "+1点: 月足20MA右肩上がり"
+        ],
+        "penalty_reasons": [],
+        "hard_avoid_flags": [],
+        "soft_warning_flags": [],
+        "avoid_flags": [],
+        "sell_state": "ホールド",
+        "sell_reasons": [],
+        "surge_pct_last5bars": 3.22,
+        "stop_loss_candidates": {
+          "現在値-5%": 2937.4,
+          "直近20日安値": 2720.5,
+          "日足20MA": 2943.22
+        },
+        "last_close": 3092.0,
+        "diagnostics": {
+          "below_ma5_now": false,
+          "above_ma5_now": true,
+          "days_below_ma5_in_last_5": 0,
+          "bears_in_last_5": 4,
+          "ma5_bearish_breakdown_recent": false,
+          "breakdown_days_ago": null
+        }
+      },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 1.63,
+        "ma5_now": 3042.3,
+        "self_mean_positive_dev_pct": 1.95,
+        "self_p80_dev_pct": 2.11,
+        "self_p90_dev_pct": 3.25,
+        "pullback_threshold_pct": 1.0,
+        "zone": "中間",
+        "pullback_target_price": [
+          3042.3,
+          3072.72
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
+      "volume_zones": {
+        "resistance_zones_above": [],
+        "support_zones_below": [
+          2586.2,
+          2635.0,
+          2757.0,
+          2830.2,
+          2854.6,
+          2879.0,
+          2903.4,
+          2952.2,
+          2976.6
+        ],
+        "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
+      },
+      "earnings": {
+        "next_earnings_date": "2026-08-06",
+        "days_until": 50,
+        "source": "calendar",
+        "advice": "あと50日。通常運用可"
+      },
+      "fundamentals": {
+        "market_cap_oku": 16405,
+        "per_trailing": 18.45,
+        "per_forward": 24.72,
+        "pbr": 1.33,
+        "dividend_yield_pct": 3.19,
+        "roe_pct": 7.54,
+        "operating_margin_pct": 30.65,
+        "revenue_growth_pct": 30.9,
+        "eps_growth_pct": -4.4,
+        "fundamental_score": 3,
+        "fundamental_score_max_theoretical": 8,
+        "fundamental_score_min_theoretical": -5,
+        "fundamental_reasons": [
+          "+1点: PER 24.7倍 = 適正範囲（マニュアル想定）",
+          "+1点: 売上成長 +30.9% = 好調",
+          "+1点: 営業利益率 30.6% = 高採算",
+          "+1点: 時価総額 16405億 = §4 大型株要件クリア"
+        ],
+        "fundamental_penalty_reasons": [
+          "-1点: EPS成長 -4% = 減益（マニュアル §4 削除要件相当）"
+        ],
+        "valuation_label": "適正"
+      },
+      "verdict": "🟢 買いサイン強い",
+      "name": "しずおかフィナンシャルG",
+      "note": "地銀・名古屋銀統合思惑（2028目途）、時価1.54兆、純利益904億 +21.2%"
+    },
+    {
+      "ticker": "5844",
+      "data_freshness": {
+        "fetched_at": "2026-06-17T01:59:53",
+        "last_daily_bar_date": "2026-06-17",
+        "days_old": 0,
+        "status": "本日深夜（前日確定値の可能性あり）",
+        "source": "yfinance (Yahoo Finance、15-20分遅延)"
+      },
+      "timeframes": {
+        "daily": {
+          "timeframe": "日足",
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 4601.0,
+          "candle": "陰線",
+          "ma_slope_pct_per_bar": {
+            "MA5": -0.177,
+            "MA10": 0.413,
+            "MA20": 0.179,
+            "MA50": 0.147,
+            "MA100": 0.221
+          },
+          "ma_direction": {
+            "MA5": "down",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        },
+        "weekly": {
+          "timeframe": "週足",
+          "last_bar_datetime": "2026-06-15T00:00:00+09:00",
+          "last_close": 4601.0,
+          "candle": "陽線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 0.715,
+            "MA10": 0.321,
+            "MA20": 1.03,
+            "MA50": 1.137,
+            "MA100": 0.577
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        },
+        "monthly": {
+          "timeframe": "月足",
+          "last_bar_datetime": "2026-06-01T00:00:00+09:00",
+          "last_close": 4601.0,
+          "candle": "陽線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 5.325,
+            "MA10": 5.371,
+            "MA20": 3.556,
+            "MA50": 2.732,
+            "MA100": 1.666
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        }
+      },
+      "signals": {
+        "trend_period_bars": 1,
         "buy_score": 8,
         "buy_score_max_theoretical": 14,
         "buy_score_min_theoretical": -7,
         "buy_reasons": [
-          "+2点: 5MAに近接 + トレンド周期2本（押し目候補・終値5MA上）",
+          "+1点: 日足20MA右肩上がり",
+          "+2点: 週足5MA右肩上がり",
+          "+1点: 週足10MA右肩上がり or 横ばい",
+          "+1点: 週足20MA右肩上がり or 横ばい",
+          "+1点: 月足5MA右肩上がり",
+          "+1点: 月足10MA右肩上がり",
+          "+1点: 月足20MA右肩上がり"
+        ],
+        "penalty_reasons": [],
+        "hard_avoid_flags": [],
+        "soft_warning_flags": [],
+        "avoid_flags": [],
+        "sell_state": "ホールド",
+        "sell_reasons": [],
+        "surge_pct_last5bars": 2.38,
+        "stop_loss_candidates": {
+          "現在値-5%": 4370.95,
+          "直近20日安値": 4193.0,
+          "日足20MA": 4500.25
+        },
+        "last_close": 4601.0,
+        "diagnostics": {
+          "below_ma5_now": false,
+          "above_ma5_now": true,
+          "days_below_ma5_in_last_5": 3,
+          "bears_in_last_5": 4,
+          "ma5_bearish_breakdown_recent": false,
+          "breakdown_days_ago": null
+        }
+      },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 1.52,
+        "ma5_now": 4532.2,
+        "self_mean_positive_dev_pct": 1.74,
+        "self_p80_dev_pct": 2.0,
+        "self_p90_dev_pct": 2.82,
+        "pullback_threshold_pct": 1.0,
+        "zone": "中間",
+        "pullback_target_price": [
+          4532.2,
+          4577.52
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
+      "volume_zones": {
+        "resistance_zones_above": [],
+        "support_zones_below": [
+          4303.9,
+          4327.0,
+          4350.2,
+          4396.4,
+          4419.6,
+          4442.7,
+          4465.8,
+          4489.0,
+          4558.4
+        ],
+        "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
+      },
+      "earnings": {
+        "next_earnings_date": "2026-07-30",
+        "days_until": 43,
+        "source": "calendar",
+        "advice": "あと43日。通常運用可"
+      },
+      "fundamentals": {
+        "market_cap_oku": 13007,
+        "per_trailing": 13.57,
+        "per_forward": 33.08,
+        "pbr": 1.15,
+        "dividend_yield_pct": 2.36,
+        "roe_pct": 8.72,
+        "operating_margin_pct": 42.22,
+        "revenue_growth_pct": 563.2,
+        "eps_growth_pct": 1335.0,
+        "fundamental_score": 5,
+        "fundamental_score_max_theoretical": 8,
+        "fundamental_score_min_theoretical": -5,
+        "fundamental_reasons": [
+          "+0点: PER 33.1倍 = やや高めだが許容範囲",
+          "+2点: EPS成長 +1335% = 絶好調",
+          "+1点: 売上成長 +563.2% = 好調",
+          "+1点: 営業利益率 42.2% = 高採算",
+          "+1点: 時価総額 13007億 = §4 大型株要件クリア"
+        ],
+        "fundamental_penalty_reasons": [],
+        "valuation_label": "やや割高"
+      },
+      "verdict": "🟢 買いサイン強い（ファンダ◎(F:5)）",
+      "name": "京都フィナンシャルG",
+      "note": "含み益・株主還元、時価1.31兆、純利益450億 +23.1%、任天堂・村田等の含み益、政策保有株縮減"
+    },
+    {
+      "ticker": "8354",
+      "data_freshness": {
+        "fetched_at": "2026-06-17T01:59:54",
+        "last_daily_bar_date": "2026-06-17",
+        "days_old": 0,
+        "status": "本日深夜（前日確定値の可能性あり）",
+        "source": "yfinance (Yahoo Finance、15-20分遅延)"
+      },
+      "timeframes": {
+        "daily": {
+          "timeframe": "日足",
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 6985.0,
+          "candle": "陰線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 0.251,
+            "MA10": 0.685,
+            "MA20": 0.241,
+            "MA50": 0.237,
+            "MA100": 0.205
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        },
+        "weekly": {
+          "timeframe": "週足",
+          "last_bar_datetime": "2026-06-15T00:00:00+09:00",
+          "last_close": 6985.0,
+          "candle": "陰線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 1.335,
+            "MA10": 0.758,
+            "MA20": 0.985,
+            "MA50": 1.112,
+            "MA100": 0.554
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        },
+        "monthly": {
+          "timeframe": "月足",
+          "last_bar_datetime": "2026-06-01T00:00:00+09:00",
+          "last_close": 6985.0,
+          "candle": "陽線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 5.485,
+            "MA10": 4.934,
+            "MA20": 3.031,
+            "MA50": 2.315,
+            "MA100": 1.198
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        }
+      },
+      "signals": {
+        "trend_period_bars": 1,
+        "buy_score": 9,
+        "buy_score_max_theoretical": 14,
+        "buy_score_min_theoretical": -7,
+        "buy_reasons": [
+          "+1点: 日足5MA右肩上がり + 終値5MA上",
+          "+1点: 日足20MA右肩上がり",
+          "+2点: 週足5MA右肩上がり",
+          "+1点: 週足10MA右肩上がり or 横ばい",
+          "+1点: 週足20MA右肩上がり or 横ばい",
+          "+1点: 月足5MA右肩上がり",
+          "+1点: 月足10MA右肩上がり",
+          "+1点: 月足20MA右肩上がり"
+        ],
+        "penalty_reasons": [],
+        "hard_avoid_flags": [],
+        "soft_warning_flags": [],
+        "avoid_flags": [],
+        "sell_state": "ホールド",
+        "sell_reasons": [],
+        "surge_pct_last5bars": 1.82,
+        "stop_loss_candidates": {
+          "現在値-5%": 6635.75,
+          "直近20日安値": 6154.0,
+          "日足20MA": 6698.95
+        },
+        "last_close": 6985.0,
+        "diagnostics": {
+          "below_ma5_now": false,
+          "above_ma5_now": true,
+          "days_below_ma5_in_last_5": 1,
+          "bears_in_last_5": 4,
+          "ma5_bearish_breakdown_recent": true,
+          "breakdown_days_ago": 4
+        }
+      },
+      "ma5_deviation": {
+        "available": true,
+        "current_dev_pct": 1.66,
+        "ma5_now": 6871.2,
+        "self_mean_positive_dev_pct": 2.16,
+        "self_p80_dev_pct": 2.12,
+        "self_p90_dev_pct": 3.53,
+        "pullback_threshold_pct": 1.08,
+        "zone": "中間",
+        "pullback_target_price": [
+          6871.2,
+          6939.91
+        ],
+        "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
+      },
+      "volume_zones": {
+        "resistance_zones_above": [],
+        "support_zones_below": [
+          6315.5,
+          6358.9,
+          6445.8,
+          6532.6,
+          6576.1,
+          6619.5,
+          6663.0,
+          6706.4,
+          6836.7
+        ],
+        "interpretation": "下値サポート厚い・上値抵抗薄い → 上昇余地あり"
+      },
+      "earnings": {
+        "next_earnings_date": "2026-08-06",
+        "days_until": 50,
+        "source": "calendar",
+        "advice": "あと50日。通常運用可"
+      },
+      "fundamentals": {
+        "market_cap_oku": 13199,
+        "per_trailing": 15.45,
+        "per_forward": 17.17,
+        "pbr": 1.23,
+        "dividend_yield_pct": 3.06,
+        "roe_pct": 8.52,
+        "operating_margin_pct": 11.85,
+        "revenue_growth_pct": null,
+        "eps_growth_pct": null,
+        "fundamental_score": 2,
+        "fundamental_score_max_theoretical": 8,
+        "fundamental_score_min_theoretical": -5,
+        "fundamental_reasons": [
+          "+1点: PER 17.2倍 = 適正範囲（マニュアル想定）",
+          "EPS成長 不明",
+          "+1点: 時価総額 13199億 = §4 大型株要件クリア"
+        ],
+        "fundamental_penalty_reasons": [],
+        "valuation_label": "適正"
+      },
+      "verdict": "🟢 買いサイン強い",
+      "name": "ふくおかフィナンシャルG",
+      "note": "地銀・割安高配当、時価1.28兆、純利益854億 +18.4%、PER12.7倍最割安、年間210円配当"
+    },
+    {
+      "ticker": "5830",
+      "data_freshness": {
+        "fetched_at": "2026-06-17T01:59:54",
+        "last_daily_bar_date": "2026-06-17",
+        "days_old": 0,
+        "status": "本日深夜（前日確定値の可能性あり）",
+        "source": "yfinance (Yahoo Finance、15-20分遅延)"
+      },
+      "timeframes": {
+        "daily": {
+          "timeframe": "日足",
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 3138.0,
+          "candle": "陽線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 0.323,
+            "MA10": 0.279,
+            "MA20": -0.054,
+            "MA50": 0.099,
+            "MA100": 0.092
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "down",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        },
+        "weekly": {
+          "timeframe": "週足",
+          "last_bar_datetime": "2026-06-15T00:00:00+09:00",
+          "last_close": 3138.0,
+          "candle": "陰線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 0.284,
+            "MA10": 0.137,
+            "MA20": 0.423,
+            "MA50": 1.233,
+            "MA100": 0.784
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "up",
+            "MA100": "up"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        },
+        "monthly": {
+          "timeframe": "月足",
+          "last_bar_datetime": "2026-06-01T00:00:00+09:00",
+          "last_close": 3138.0,
+          "candle": "陽線",
+          "ma_slope_pct_per_bar": {
+            "MA5": 2.98,
+            "MA10": 5.499,
+            "MA20": 4.118,
+            "MA50": 0.0,
+            "MA100": 0.0
+          },
+          "ma_direction": {
+            "MA5": "up",
+            "MA10": "up",
+            "MA20": "up",
+            "MA50": "flat",
+            "MA100": "flat"
+          },
+          "above_ma": {
+            "MA5": true,
+            "MA10": true,
+            "MA20": true
+          }
+        }
+      },
+      "signals": {
+        "trend_period_bars": 3,
+        "buy_score": 6,
+        "buy_score_max_theoretical": 14,
+        "buy_score_min_theoretical": -7,
+        "buy_reasons": [
           "+1点: 日足5MA右肩上がり + 終値5MA上",
           "+2点: 週足5MA右肩上がり",
           "+1点: 週足10MA右肩上がり or 横ばい",
@@ -3522,65 +3530,65 @@
         ],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 2.58,
+        "surge_pct_last5bars": 1.92,
         "stop_loss_candidates": {
-          "現在値-5%": 2944.05,
+          "現在値-5%": 2981.1,
           "直近20日安値": 2871.0,
-          "日足20MA": 3062.15
+          "日足20MA": 3067.75
         },
-        "last_close": 3099.0,
+        "last_close": 3138.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
           "days_below_ma5_in_last_5": 2,
-          "bears_in_last_5": 3,
+          "bears_in_last_5": 2,
           "ma5_bearish_breakdown_recent": true,
-          "breakdown_days_ago": 3
+          "breakdown_days_ago": 4
         }
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 1.28,
-        "ma5_now": 3059.8,
-        "self_mean_positive_dev_pct": 2.15,
+        "current_dev_pct": 1.72,
+        "ma5_now": 3084.8,
+        "self_mean_positive_dev_pct": 2.16,
         "self_p80_dev_pct": 2.33,
         "self_p90_dev_pct": 3.57,
         "pullback_threshold_pct": 1.08,
         "zone": "中間",
         "pullback_target_price": [
-          3059.8,
-          3090.4
+          3084.8,
+          3115.65
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
       "volume_zones": {
         "resistance_zones_above": [
-          3115.9,
+          3154.0,
           3173.1,
           3211.2
         ],
         "support_zones_below": [
-          2906.4,
           2982.6,
           3001.6,
           3039.7,
           3058.8,
-          3077.8
+          3077.8,
+          3115.9
         ],
         "interpretation": "上下ともゾーンあり → レンジ展開想定"
       },
       "earnings": {
         "next_earnings_date": "2026-08-07",
-        "days_until": 52,
+        "days_until": 51,
         "source": "calendar",
-        "advice": "あと52日。通常運用可"
+        "advice": "あと51日。通常運用可"
       },
       "fundamentals": {
-        "market_cap_oku": 8897,
-        "per_trailing": 12.21,
-        "per_forward": 21.69,
-        "pbr": 1.02,
-        "dividend_yield_pct": 2.53,
+        "market_cap_oku": 9009,
+        "per_trailing": 12.36,
+        "per_forward": 21.96,
+        "pbr": 1.03,
+        "dividend_yield_pct": 2.58,
         "roe_pct": 8.84,
         "operating_margin_pct": 28.96,
         "revenue_growth_pct": 355.9,
@@ -3589,11 +3597,11 @@
         "fundamental_score_max_theoretical": 8,
         "fundamental_score_min_theoretical": -5,
         "fundamental_reasons": [
-          "+1点: PER 21.7倍 = 適正範囲（マニュアル想定）",
+          "+1点: PER 22.0倍 = 適正範囲（マニュアル想定）",
           "+1点: EPS成長 +39% = 好調",
           "+1点: 売上成長 +355.9% = 好調",
           "+1点: 営業利益率 29.0% = 高採算",
-          "+1点: 時価総額 8897億 = §4 大型株要件クリア"
+          "+1点: 時価総額 9009億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [],
         "valuation_label": "適正"
@@ -3605,23 +3613,23 @@
     {
       "ticker": "5838",
       "data_freshness": {
-        "fetched_at": "2026-06-16T11:41:46",
-        "last_daily_bar_date": "2026-06-16",
+        "fetched_at": "2026-06-17T01:59:55",
+        "last_daily_bar_date": "2026-06-17",
         "days_old": 0,
-        "status": "本日場中（最新バーは未確定・暫定値）",
+        "status": "本日深夜（前日確定値の可能性あり）",
         "source": "yfinance (Yahoo Finance、15-20分遅延)"
       },
       "timeframes": {
         "daily": {
           "timeframe": "日足",
-          "last_bar_datetime": "2026-06-16T00:00:00+09:00",
-          "last_close": 5244.0,
+          "last_bar_datetime": "2026-06-17T00:00:00+09:00",
+          "last_close": 5257.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": 0.852,
-            "MA10": 1.155,
-            "MA20": -1.113,
-            "MA50": -0.244,
+            "MA5": 0.865,
+            "MA10": 1.162,
+            "MA20": -1.11,
+            "MA50": -0.243,
             "MA100": -0.276
           },
           "ma_direction": {
@@ -3640,13 +3648,13 @@
         "weekly": {
           "timeframe": "週足",
           "last_bar_datetime": "2026-06-15T00:00:00+09:00",
-          "last_close": 5244.0,
+          "last_close": 5257.0,
           "candle": "陰線",
           "ma_slope_pct_per_bar": {
-            "MA5": -3.875,
-            "MA10": -1.969,
-            "MA20": -1.531,
-            "MA50": -0.512,
+            "MA5": -3.864,
+            "MA10": -1.963,
+            "MA20": -1.528,
+            "MA50": -0.511,
             "MA100": 0.339
           },
           "ma_direction": {
@@ -3665,12 +3673,12 @@
         "monthly": {
           "timeframe": "月足",
           "last_bar_datetime": "2026-06-01T00:00:00+09:00",
-          "last_close": 5244.0,
+          "last_close": 5257.0,
           "candle": "陽線",
           "ma_slope_pct_per_bar": {
-            "MA5": -5.701,
-            "MA10": -2.619,
-            "MA20": 1.846,
+            "MA5": -5.692,
+            "MA10": -2.615,
+            "MA20": 1.849,
             "MA50": 0.0,
             "MA100": 0.0
           },
@@ -3712,13 +3720,13 @@
         ],
         "sell_state": "ホールド",
         "sell_reasons": [],
-        "surge_pct_last5bars": 2.56,
+        "surge_pct_last5bars": 2.82,
         "stop_loss_candidates": {
-          "現在値-5%": 4981.8,
+          "現在値-5%": 4994.15,
           "直近20日安値": 4342.0,
-          "日足20MA": 5023.9
+          "日足20MA": 5024.55
         },
-        "last_close": 5244.0,
+        "last_close": 5257.0,
         "diagnostics": {
           "below_ma5_now": false,
           "above_ma5_now": true,
@@ -3730,16 +3738,16 @@
       },
       "ma5_deviation": {
         "available": true,
-        "current_dev_pct": 2.87,
-        "ma5_now": 5097.8,
-        "self_mean_positive_dev_pct": 2.56,
-        "self_p80_dev_pct": 3.07,
+        "current_dev_pct": 3.07,
+        "ma5_now": 5100.4,
+        "self_mean_positive_dev_pct": 2.57,
+        "self_p80_dev_pct": 3.08,
         "self_p90_dev_pct": 3.95,
         "pullback_threshold_pct": 1.28,
         "zone": "中間",
         "pullback_target_price": [
-          5097.8,
-          5148.78
+          5100.4,
+          5151.4
         ],
         "note": "押し目圏=5MA接触で買い検討可 / 伸び気味・伸びきり=押し目待ち。脆い地合い・イベント前は押し目圏(≤約+1%)まで引きつけを要求する。"
       },
@@ -3748,28 +3756,28 @@
           5997.1,
           6086.6,
           6176.1,
-          6265.5
+          6265.5,
+          6623.4
         ],
         "support_zones_below": [
           4476.2,
           4744.6,
           4834.1,
-          5013.0,
-          5191.9
+          5013.0
         ],
         "interpretation": "上下ともゾーンあり → レンジ展開想定"
       },
       "earnings": {
         "next_earnings_date": "2026-08-06",
-        "days_until": 51,
+        "days_until": 50,
         "source": "calendar",
-        "advice": "あと51日。通常運用可"
+        "advice": "あと50日。通常運用可"
       },
       "fundamentals": {
-        "market_cap_oku": 9151,
-        "per_trailing": 12.54,
-        "per_forward": 17.51,
-        "pbr": 2.46,
+        "market_cap_oku": 9174,
+        "per_trailing": 12.58,
+        "per_forward": 17.56,
+        "pbr": 2.47,
         "dividend_yield_pct": null,
         "roe_pct": 20.29,
         "operating_margin_pct": 55.23,
@@ -3779,12 +3787,12 @@
         "fundamental_score_max_theoretical": 8,
         "fundamental_score_min_theoretical": -5,
         "fundamental_reasons": [
-          "+1点: PER 17.5倍 = 適正範囲（マニュアル想定）",
+          "+1点: PER 17.6倍 = 適正範囲（マニュアル想定）",
           "+1点: EPS成長 +28% = 好調",
           "+1点: 売上成長 +27.7% = 好調",
           "+1点: ROE 20.3% = 高収益",
           "+1点: 営業利益率 55.2% = 高採算",
-          "+1点: 時価総額 9151億 = §4 大型株要件クリア"
+          "+1点: 時価総額 9174億 = §4 大型株要件クリア"
         ],
         "fundamental_penalty_reasons": [],
         "valuation_label": "適正"
@@ -3794,6 +3802,6 @@
       "note": "★異質枠：ネット銀・無配・成長株、時価8,638億、純利益712億 +40.3%、ROE8-10%超、親会社楽天Gの動向リスク"
     }
   ],
-  "generated_at": "2026-06-16T11:41:47.446224Z",
+  "generated_at": "2026-06-17T01:59:55.634185Z",
   "generated_by": "github-actions"
 }
